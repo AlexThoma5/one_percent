@@ -1,1 +1,1 @@
-web: gunicorn one-percent.wsgi
+web: gunicorn one_percent.wsgi
