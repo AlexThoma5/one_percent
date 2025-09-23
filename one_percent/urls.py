@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('dashboard.urls'), name='dashboard-urls') # Root level page is going to be dashboard
+    path('categories/', include('categories.urls'), name='categories-urls'),
+    path('', include('dashboard.urls'), name='dashboard-urls')  # Root level page is going to be dashboard
 ]
