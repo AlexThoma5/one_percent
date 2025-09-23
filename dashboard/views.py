@@ -4,5 +4,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def my_dashboard(request):
-    return HttpResponse("Hello, Dashboard!")
+def dashboard_view(request):
+    return HttpResponse("Welcome to One Percent - this is a placeholder.")  # Placeholder view for testing

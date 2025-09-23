@@ -15,10 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from dashboard.views import my_dashboard
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dashboard/', my_dashboard, name='dashboard')
+    path('', include('dashboard.urls'), name='dashboard-urls') # Root level page is going to be dashboard
 ]
