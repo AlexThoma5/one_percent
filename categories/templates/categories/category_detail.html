@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category</title>
-</head>
-<body>
+{% extends "base.html" %} 
+
+{% block content %}
+
+<!-- category_detail.html content starts here -->
     <h1>{{category.name}}</h1>
     <i class="{{category.icon}}"></i>
-</body>
-<!-- Font Awesome Kit -->
-<script src="https://kit.fontawesome.com/e1ecb81146.js" crossorigin="anonymous"></script>
-</html>
+    
+<!-- category_detail.html content ends here -->
+{% endblock %}
