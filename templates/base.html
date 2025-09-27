@@ -13,10 +13,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>One Percent</title>
   </head>
-
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top py-3">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#page-top">One Percent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#!">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
   <body class="d-flex flex-column h-100">
     <!-- Page Content -->
-    <main class="flex-grow-1">
+    <main class="flex-grow-1 mt-5 pt-4">
       {% block content %}
       <!-- Content goes here -->
       {% endblock content %}
