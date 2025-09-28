@@ -1,0 +1,20 @@
+/* Base.html styles */
+
+/* Header */
+
+.navbar-custom {
+    background-color: rgb(0, 0, 0, 0.7);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1rem;
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link {
+  font-size: 0.8rem;
+}
