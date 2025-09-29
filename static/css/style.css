@@ -1,5 +1,9 @@
 /* Base.html styles */
 
+body {
+  background-color: #000235;
+}
+
 /* Header */
 
 .navbar-custom {
@@ -17,4 +21,28 @@
 
 .navbar-custom .navbar-nav .nav-item .nav-link {
   font-size: 0.8rem;
+}
+
+/* Dashboard.html styles */
+
+.welcome {
+  text-transform: uppercase;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.category-card {
+  aspect-ratio: 5/4;
+  background-color: rgba(142, 142, 142, 0.7);
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.card-title {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
 }
