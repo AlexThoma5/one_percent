@@ -13,3 +13,20 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Log(models.Model):
+    """
+    Stores a single log entry
+    """
+    title = models.CharField(max_length=50)
+    content = models.TextField(blank=True)  # Optional field for extra notes
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="logs")
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f'{self.title} ({self.category})'
