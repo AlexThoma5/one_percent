@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Category
+from .models import Category, Log
 
 # Create your views here.
 
@@ -17,6 +17,8 @@ def category_detail(request, slug):
 
     ``category``
         An instance of :model:`categories.Category`.
+    ``logs``
+        All logs in relation to the category`.
     **Template:**
 
     :template:`categories/category_detail.html`
@@ -24,9 +26,12 @@ def category_detail(request, slug):
 
     queryset = Category.objects.all()
     category = get_object_or_404(queryset, slug=slug)
+    logs = category.logs.all().order_by('-created_on')
 
     return render(
         request,
         "categories/category_detail.html",
-        {"category": category},
+        {"category": category,
+         "logs": logs,
+         },
     )
