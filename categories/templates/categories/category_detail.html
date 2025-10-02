@@ -1,10 +1,32 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block content %}
+<div class="container">
 
-<!-- category_detail.html content starts here -->
-    <h1>{{category.name}}</h1>
-    <i class="{{category.icon}}"></i>
-    
-<!-- category_detail.html content ends here -->
-{% endblock %}
+  <!-- Category Header -->
+  <div class="mb-4 text-center">
+    <h1 class="display-5 welcome">{{ category.name }}</h1>
+  </div>
+
+  <!-- Logs Section -->
+  <h2 class="h4 mb-3 welcome text-center">Logs</h2>
+  {% if logs %}
+    <div class="row justify-content-center">
+      {% for log in logs %}
+        <div class="col-md-8 mb-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-primary">{{ log.title }}</h5>
+              <p class="card-text">{{ log.content|truncatewords:25 }}</p>
+              <p class="text-muted small mt-auto">Created on {{ log.created_on|date:"M d, Y H:i" }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-info">No logs available for this category yet.</div>
+  {% endif %}
+
+</div>
+{% endblock content %}
