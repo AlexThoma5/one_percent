@@ -13,17 +13,7 @@
     <!-- Create new logs button -->
   <div class="row justify-content-center p-2 text-end">
     <div class="col-md-8">
-      <button class="btn btn-primary">Add new log</button>
-    </div>
-  </div>
-  <div class="row justify-content-center p-2">
-    <div class="col-md-8">
-      <form method="post">
-        {{ log_form | crispy }}
-        {% csrf_token %}
-        <button id="submitButton"
-        type="submit" class="btn btn-danger btn-lg">Submit</button>
-      </form>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addLogModal">Add new log</button>
     </div>
   </div>
   {% if logs %}
@@ -44,5 +34,32 @@
     <div class="alert alert-info">No logs available for this category yet.</div>
   {% endif %}
 
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="addLogModal" tabindex="-1" aria-labelledby="addLogModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="post">
+        {% csrf_token %}
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add {{ category.name }} log</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body container">
+          <div class="row justify-content-center p-2">
+            <div class="col">
+                {{ log_form | crispy }}
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="submitButton" type="submit" class="btn btn-danger">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 {% endblock content %}
