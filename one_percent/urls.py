@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('categories/', include('categories.urls'), name='categories-urls'),
     path('', include('dashboard.urls'), name='dashboard-urls')  # Root level page is going to be dashboard
