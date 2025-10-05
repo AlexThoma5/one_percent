@@ -1,62 +1,98 @@
-{% extends "base.html" %}
-{% load crispy_forms_tags %}
-
-{% block content %}
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
 <div class="container">
-
   <!-- Category Header -->
   <div class="mb-4 text-center">
     <h1 class="display-5 welcome">{{ category.name }}</h1>
   </div>
   <!-- Logs Section -->
   <h2 class="h4 mb-3 welcome text-center">Logs</h2>
-    <!-- Create new logs button -->
-  <div class="row justify-content-center p-2 text-end">
-    <div class="col-md-8">
-      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addLogModal">Add new log</button>
+  <!-- Create new logs button -->
+  <div class="row justify-content-center pb-3 text-start">
+    <div class="col-12">
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#addLogModal"
+      >
+        Add Entry
+      </button>
     </div>
   </div>
   {% if logs %}
-    <div class="row justify-content-center">
-      {% for log in logs %}
-        <div class="col-md-8 mb-3">
-          <div class="card shadow-sm h-100">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title text-primary">{{ log.title }}</h5>
-              <p class="card-text">{{ log.content|truncatewords:25 }}</p>
-              <p class="text-muted small mt-auto">Created on {{ log.created_on|date:"M d, Y H:i" }}</p>
+  <div class="row g-3">
+    {% for log in logs %}
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start gap-3">
+            <div>
+              <p class="card-title mb-1 fw-semibold log-title h5">
+                {{ log.title }}
+              </p>
+              <p class="text-muted small mb-2">
+                {{ log.created_on |date:"d M Y • H:i A" }}
+              </p>
+            </div>
+            <div class="icon-width">
+              <a href="" class="text-secondary me-2"
+                ><i class="fa-solid fa-pen grow"></i
+              ></a>
+              <a href="" class="text-danger"
+                ><i class="fa-solid fa-trash grow"></i
+              ></a>
             </div>
           </div>
+          <p class="card-text mt-2 mb-0 text-muted">{{ log.content }}</p>
         </div>
-      {% endfor %}
+      </div>
     </div>
+    {% endfor %}
+  </div>
   {% else %}
-    <div class="alert alert-info">No logs available for this category yet.</div>
+  <div class="alert alert-info">No logs available for this category yet.</div>
   {% endif %}
-
 </div>
 
 <!-- Bootstrap Modal -->
-<div class="modal fade" id="addLogModal" tabindex="-1" aria-labelledby="addLogModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="addLogModal"
+  tabindex="-1"
+  aria-labelledby="addLogModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <form method="post">
         {% csrf_token %}
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Add {{ category.name }} log</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Add {{ category.name }} log
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body container">
           <div class="row justify-content-center p-2">
-            <div class="col">
-                {{ log_form | crispy }}
-            </div>
+            <div class="col">{{ log_form | crispy }}</div>
           </div>
         </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button id="submitButton" type="submit" class="btn btn-danger">Submit</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button id="submitButton" type="submit" class="btn btn-danger">
+            Submit
+          </button>
         </div>
       </form>
     </div>
