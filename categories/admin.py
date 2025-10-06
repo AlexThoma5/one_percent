@@ -7,6 +7,6 @@ admin.site.register(Category)
 
 @admin.register(Log)
 class LogAdmin(admin.ModelAdmin):
-    list_display = ("title", "category", "created_on")
+    list_display = ("title", "user", "category", "created_on")
     search_fields = ("title",)
     list_filter = ("category", "created_on")
