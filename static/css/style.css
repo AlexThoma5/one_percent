@@ -54,6 +54,13 @@ body {
   text-transform: capitalize;
 }
 
+.icon-btn-style {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 .icon-width {
   min-width: 42.19px;
 }
