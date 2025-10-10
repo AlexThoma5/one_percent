@@ -21,7 +21,7 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 */
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
-    let logId = e.currentTarget.getAttribute("log_id");
+    let logId = e.currentTarget.getAttribute("data-log_id");
     let logTitle = document.getElementById(`logTitle${logId}`).innerText;
     let logContent = document.getElementById(`log${logId}`).innerText;
 
