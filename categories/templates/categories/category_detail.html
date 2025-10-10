@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+{% extends "base.html" %}
+{% load static %} 
+{% load crispy_forms_tags %}
+{% block content %}
 <div class="container">
   <!-- Category Header -->
   <div class="mb-4 text-center">
@@ -26,7 +29,7 @@
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-start gap-3">
             <div>
-              <p class="card-title mb-1 fw-semibold log-title h5">
+              <p class="card-title mb-1 fw-semibold log-title h5" id="logTitle{{ log.id }}">
                 {{ log.title }}
               </p>
               <p class="text-muted small mb-2">
@@ -34,15 +37,21 @@
               </p>
             </div>
             <div class="icon-width">
-              <a href="" class="text-secondary me-2"
-                ><i class="fa-solid fa-pen grow"></i
-              ></a>
+              {% if user.is_authenticated and log.user == user %}
+              <button
+                type="button"
+                class="text-secondary me-2 edit-pen icon-btn-style btn-edit"
+                log_id="{{ log.id }}"
+              >
+                <i class="fa-solid fa-pen grow"></i>
+              </button>
               <a href="" class="text-danger"
                 ><i class="fa-solid fa-trash grow"></i
               ></a>
+              {% endif %}
             </div>
           </div>
-          <p class="card-text mt-2 mb-0 text-muted">{{ log.content }}</p>
+          <p class="card-text mt-2 mb-0 text-muted" id='log{{ log.id }}'>{{ log.content }}</p>
         </div>
       </div>
     </div>
@@ -53,7 +62,7 @@
   {% endif %}
 </div>
 
-<!-- Bootstrap Modal -->
+<!-- Bootstrap Modal for adding logs -->
 <div
   class="modal fade"
   id="addLogModal"
@@ -63,7 +72,7 @@
 >
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <form method="post">
+      <form method="post" id="logForm">
         {% csrf_token %}
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">
@@ -92,6 +101,52 @@
           </button>
           <button id="submitButton" type="submit" class="btn btn-danger">
             Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Modal for editing logs -->
+<div
+  class="modal fade"
+  id="editLogModal"
+  tabindex="-1"
+  aria-labelledby="editLogModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="post" id="editLogForm">
+        {% csrf_token %}
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="editLogModalLabel">
+            Edit {{ category.name }} log
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body container">
+          <div class="row justify-content-center p-2">
+            <div class="col">{{ log_form | crispy }}</div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cancel
+          </button>
+          <button id="submitButton" type="submit" class="btn btn-danger">
+            Update
           </button>
         </div>
       </form>
