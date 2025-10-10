@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from .models import Category, Log
 from .forms import LogForm
 
@@ -8,6 +9,7 @@ from .forms import LogForm
 
 def test_view(request):
     return HttpResponse("This is a test view for categories app")  # Temporary response for testing
+
 
 @login_required
 def category_detail(request, slug):
@@ -49,3 +51,25 @@ def category_detail(request, slug):
          "log_form": log_form
          },
     )
+
+
+@login_required
+def log_edit(request, slug, log_id):
+    """
+    View to for user to edit logs
+
+    **Context**
+
+    ``log``
+        A single log related to the category.
+    ``log_form``
+    An instance of :form:`categories.LogForm`
+    """
+    if request.method == "POST":
+        log = get_object_or_404(Log, pk=log_id)
+        log_form = LogForm(data=request.POST, instance=log)
+
+        if log_form.is_valid() and log.user == request.user:
+            log_form.save()
+
+    return HttpResponseRedirect(reverse('category_detail', args=[slug]))
