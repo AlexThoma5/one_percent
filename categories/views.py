@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Category, Log
 from .forms import LogForm
@@ -40,6 +41,9 @@ def category_detail(request, slug):
             log.user = request.user
             log.category = category
             log.save()
+            messages.add_message(request, messages.SUCCESS, 'Great job! Your new log has been added.')
+        else:
+            messages.add_message(request, messages.ERROR, 'Something went wrong — but your effort still matters.')
 
     log_form = LogForm()
 
@@ -71,6 +75,9 @@ def log_edit(request, slug, log_id):
 
         if log_form.is_valid() and log.user == request.user:
             log_form.save()
+            messages.add_message(request, messages.SUCCESS, 'Log Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating Log!')
 
     return HttpResponseRedirect(reverse('category_detail', args=[slug]))
 
@@ -84,5 +91,8 @@ def log_delete(request, slug, log_id):
 
     if log.user == request.user:
         log.delete()
+        messages.add_message(request, messages.SUCCESS, 'Log deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, "Deletion didn’t work, but you’ve still got control over your journey.")
 
     return HttpResponseRedirect(reverse('category_detail', args=[slug]))
