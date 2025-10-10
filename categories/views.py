@@ -73,3 +73,16 @@ def log_edit(request, slug, log_id):
             log_form.save()
 
     return HttpResponseRedirect(reverse('category_detail', args=[slug]))
+
+
+@login_required
+def log_delete(request, slug, log_id):
+    """
+    view to delete log
+    """
+    log = get_object_or_404(Log, pk=log_id)
+
+    if log.user == request.user:
+        log.delete()
+
+    return HttpResponseRedirect(reverse('category_detail', args=[slug]))
