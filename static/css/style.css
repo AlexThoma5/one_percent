@@ -36,6 +36,10 @@ body {
   background: #590e0e;
 }
 
+.alert.fade {
+  transition: opacity 1s ease; 
+}
+
 /* Header */
 
 .navbar-custom {
