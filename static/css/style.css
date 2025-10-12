@@ -1,7 +1,55 @@
-/* Base.html styles */
+/* CSS Variables */
+:root {
+    --primary-font: ;
+    --secondary-font: ;
+    --background-color: #0a0f24;
+    --primary-color: ;
+    --hightlight-color: ;
+    --secondary-highlight-color: ;
+}
+
+/* -------------- Base.html styles -------------- */
+
+/* Custom glow background */
 
 body {
-  background-color: #000235;
+  background-color: var(--background-color);
+  position: relative;
+  color: white;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1; 
+}
+
+.glow {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.7;
+  animation: pulse 7s ease-in-out infinite;
+}
+
+.glow-blue {
+  background: #4aa8ff;
+  right: -20vw;
+  bottom: 10vh;
+}
+
+.glow-pink {
+  background: #d46aff;
+  top: -10vw;
+  left: -15vw;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7;}
+  50% { transform: scale(1.4); opacity: 0.9;}
 }
 
 /* Notification styles */
@@ -59,7 +107,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* Dashboard.html styles */
+/* -------------- Dashboard.html styles -------------- */
 
 .welcome {
   text-transform: uppercase;
@@ -83,7 +131,7 @@ body {
   text-decoration: none;
 }
 
-/* Category_detail pages */
+/* -------------- Category_detail pages -------------- */
 
 .log-title {
   color: #006eff;
