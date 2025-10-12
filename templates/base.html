@@ -68,6 +68,34 @@
         </div>
       </div>
     </nav>
+    <!-- Notification container -->
+    <div class="container position-fixed z-3 start-0 end-0">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          {% for message in messages %}
+          <!-- Notification -->
+          <div class="notification alert d-flex align-items-center justify-content-between rounded-4 p-3 px-4 gap-3 fade show {{ message.tags }}" role="alert">
+            <!-- Icon -->
+            <div class="d-flex justify-content-center align-items-center notification-icon">
+              {% if "success" in message.tags %}
+              <i class="fa-solid fa-check"></i>
+              {% else %}
+              <i class="fa-solid fa-xmark"></i>
+              {% endif %}
+            </div>
+            <!-- Content -->
+            <div class="flex-grow-1">
+              <h5 class="fw-bold mb-1 text-light">{% if "success" in message.tags %}Success{% else %}Error{% endif %}</h5>
+              <p class="mb-0">{{ message|safe }}</p>
+            </div>
+            <!-- Close button -->
+            <button type="button" class="btn-close btn-close-white small" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
     <!-- Page Content -->
     <main class="flex-grow-1 mt-5 pt-4">
       {% block content %}

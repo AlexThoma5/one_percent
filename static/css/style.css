@@ -4,6 +4,38 @@ body {
   background-color: #000235;
 }
 
+/* Notification styles */
+
+.notification {
+  margin-top: 80px;
+  max-width: 448px;
+  width: 100%;
+  background: linear-gradient(
+    90deg, #084431 0%, #232631 40%
+  );
+  color: #898c97;
+}
+
+.notification-icon {
+  height: 48px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: #0a4f3a;
+  color: #26f2b1;
+  font-size: 1rem;
+}
+
+.notification.error {
+  background: linear-gradient(
+    90deg, #480607 0%, #232631 40%
+  );
+}
+
+.notification.error .notification-icon {
+  color: #ff5c5a;
+  background: #590e0e;
+}
+
 /* Header */
 
 .navbar-custom {
