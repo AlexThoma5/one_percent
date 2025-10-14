@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Header-->
+<header
+  class="p-4 text-center d-flex align-items-center justify-content-center hero">
+  <div class="container">
+    <h1 class="hero-title">One Percent</h1>
+    <h2 class="hero-subtitle">Build momentum by tracking your daily activity</h2>
+    <a class="btn btn-primary btn-xl rounded-pill mt-3" href="{% url 'account_signup' %}"
+      >Join Now</a
+    >
+  </div>
+</header>
+
+{% endblock %}

@@ -107,6 +107,25 @@ body {
   font-size: 0.8rem;
 }
 
+/* -------------- landing.html styles -------------- */
+.hero {
+  height: 70vh;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 5rem); /* min 2.5rem, fluid 6vw, max 5rem */
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 2.5vw, 2rem); /* min 1.25rem, fluid 2.5vw, max 2rem */
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
 /* -------------- Dashboard.html styles -------------- */
 
 .welcome {
