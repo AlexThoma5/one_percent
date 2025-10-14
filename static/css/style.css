@@ -16,6 +16,7 @@ body {
   background-color: var(--background-color);
   position: relative;
   color: white;
+  overflow-x: hidden;
 }
 
 .background {
