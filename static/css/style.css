@@ -126,6 +126,32 @@ body {
   margin-bottom: 1.5rem;
 }
 
+section {
+  background-color: var(--background-color);
+}
+
+.content-icon {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 150px;
+}
+
+.content-icon > i {
+  font-size: 3rem;
+}
+
+.fa-seedling {
+  color: #31c500;
+}
+
+.fa-list-check {
+  color: #ff00d3;
+}
+
+.fa-chart-simple {
+  color: #00c5b4;
+}
+
 /* -------------- Dashboard.html styles -------------- */
 
 .welcome {
