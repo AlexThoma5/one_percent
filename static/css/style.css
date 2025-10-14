@@ -126,14 +126,24 @@ body {
   margin-bottom: 1.5rem;
 }
 
-section {
-  background-color: var(--background-color);
+.content-section {
+  background: rgb(10, 15, 36, 0.7);
+}
+
+.content-section:hover {
+  background: rgb(10, 15, 36, 0.95);
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(74, 168, 255, 0.2), 
+              0 0 40px rgba(212, 106, 255, 0.15);
 }
 
 .content-icon {
   border-radius: 50%;
   aspect-ratio: 1/1;
   height: 150px;
+  box-shadow: 0 0 25px rgba(74, 168, 255, 0.2), 
+              0 0 40px rgba(212, 106, 255, 0.15);
 }
 
 .content-icon > i {
