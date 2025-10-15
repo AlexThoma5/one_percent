@@ -237,6 +237,7 @@ body {
 
 /* Hide labels only for text/password inputs inside the card, keeps labels visible to wave tool - Code taken from chatGPT */
 .card form label[for="id_login"],
+.card form label[for="id_email"],
 .card form label[for="id_password"] {
     position: absolute !important;
     width: 1px !important;
@@ -248,6 +249,7 @@ body {
 
 /* Code taken from chatGPT */
 .card form input[type="text"],
+.card form input[type="email"],
 .card form input[type="password"] {
     display: block;
     width: 100%;
@@ -262,6 +264,7 @@ body {
 
 /* focus effect - Code taken from chatGPT */
 .card form input[type="text"]:focus,
+.card form input[type="email"]:focus,
 .card form input[type="password"]:focus {
     border-color: #86b7fe;
     outline: 0;
