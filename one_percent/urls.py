@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import handler400, handler403, handler404, handler500
 
 urlpatterns = [
     path("accounts/", include("allauth.urls")),
@@ -23,3 +24,8 @@ urlpatterns = [
     path('categories/', include('categories.urls'), name='categories-urls'),
     path('', include('dashboard.urls'), name='dashboard-urls')  # Root level page is going to be dashboard
 ]
+
+handler400 = "one_percent.views.handler400"
+handler403 = "one_percent.views.handler403"
+handler404 = "one_percent.views.handler404"
+handler500 = "one_percent.views.handler500"

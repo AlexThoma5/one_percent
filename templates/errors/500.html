@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-5 py-md-5 justify-content-center">
+        <div class="col-12 col-md-6 text-center">
+            <h1 class="text-danger">Server Error</h1>
+            <p class="fs-4">Server Error</p>
+            <p><a href="{% url 'home' %}" class="btn btn-lg btn-success m-1">Home</a></p>
+            <p><small class="text-danger fw-bold fs-6">ERROR: 500</small></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
