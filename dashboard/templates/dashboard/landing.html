@@ -1,89 +1,124 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
 <!-- Header-->
 <header
-  class="p-4 text-center d-flex align-items-center justify-content-center hero">
+  class="p-4 text-center d-flex align-items-center justify-content-center hero"
+>
   <div class="container">
     <h1 class="hero-title">One Percent</h1>
-    <h2 class="hero-subtitle">Build momentum by tracking your daily activity</h2>
-    <a class="btn btn-primary btn-xl rounded-pill mt-3" href="{% url 'account_signup' %}"
+    <h2 class="hero-subtitle">
+      Build momentum by tracking your daily activity
+    </h2>
+    <a
+      class="btn btn-primary btn-xl rounded-pill mt-3"
+      href="{% url 'account_signup' %}"
       >Join Now</a
     >
   </div>
 </header>
 
 <!-- Content section 1-->
-<section class="content-section" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center">
-      <div class="col-lg-6 order-lg-2">
-        <div class="p-5">
-          <div class="content-icon bg-dark d-flex align-items-center justify-content-center mx-auto mb-3">
-            <i class="fa-solid fa-seedling"></i>
+<section
+  class="content-section"
+  data-aos="fade-up"
+  data-aos-once="true"
+  data-aos-duration="1500"
+>
+  <div class="grow-wrapper">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <div
+              class="content-icon bg-dark d-flex align-items-center justify-content-center mx-auto mb-3"
+            >
+              <i class="fa-solid fa-seedling"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 order-lg-1">
-        <div class="p-5">
-          <h2 class="display-4">Small Wins, Big Impact</h2>
-          <p>
-            Tracking your achievements lets you see progress, stay motivated,
-            and celebrate small wins every day. By recording what you
-            accomplish, you build momentum, reinforce positive habits, and turn
-            consistent effort into real, measurable growth.
-          </p>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Small Wins, Big Impact</h2>
+            <p>
+              Tracking your achievements lets you see progress, stay motivated,
+              and celebrate small wins every day. By recording what you
+              accomplish, you build momentum, reinforce positive habits, and
+              turn consistent effort into real, measurable growth.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- Content section 2-->
-<section class="content-section" data-aos="fade-right" data-aos-once="true" data-aos-duration="1500">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center">
-      <div class="col-lg-6">
-        <div class="p-5">
-            <div class="content-icon bg-dark d-flex align-items-center justify-content-center mx-auto mb-3">
-                <i class="fa-solid fa-list-check"></i>
+<section
+  class="content-section"
+  data-aos="fade-right"
+  data-aos-once="true"
+  data-aos-duration="1500"
+>
+  <div class="grow-wrapper">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <div
+              class="content-icon bg-dark d-flex align-items-center justify-content-center mx-auto mb-3"
+            >
+              <i class="fa-solid fa-list-check"></i>
             </div>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="p-5">
-          <h2 class="display-4">Take Control of Your Day!</h2>
-          <p>
-            Easily log and manage your activities in one place—whether it’s
-            fitness, learning, habits, or personal growth. Add new tasks, update
-            progress, and review past achievements with a few clicks. By keeping
-            everything organised and accessible, you can prioritise what matters
-            most, stay consistent, and make smarter decisions about your daily
-            routine.
-          </p>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="display-4">Take Control of Your Day!</h2>
+            <p>
+              Easily log and manage your activities in one place—whether it’s
+              fitness, learning, habits, or personal growth. Add new tasks,
+              update progress, and review past achievements with a few clicks.
+              By keeping everything organised and accessible, you can prioritise
+              what matters most, stay consistent, and make smarter decisions
+              about your daily routine.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- Content section 3-->
-<section class="content-section" data-aos="fade-left" data-aos-once="true" data-aos-duration="1500">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center">
-      <div class="col-lg-6 order-lg-2">
-        <div class="p-5">
-          <div class="content-icon bg-dark d-flex align-items-center justify-content-center mx-auto mb-3">
-            <i class="fa-solid fa-chart-simple"></i>
+<section
+  class="content-section"
+  data-aos="fade-left"
+  data-aos-once="true"
+  data-aos-duration="1500"
+>
+  <div class="grow-wrapper">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <div
+              class="content-icon bg-dark d-flex align-items-center justify-content-center mx-auto mb-3"
+            >
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 order-lg-1">
-        <div class="p-5">
-          <h2 class="display-4">Your Dashboard for Daily Wins!</h2>
-          <p>
-            Everything you do matters — and now you can see it in one place.
-            Organise activities by category, edit entries as you go, and review
-            past progress at a glance. This all-in-one dashboard makes managing
-            your day simple, so building consistent habits becomes effortless.
-          </p>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Your Dashboard for Daily Wins!</h2>
+            <p>
+              Everything you do matters — and now you can see it in one place.
+              Organise activities by category, edit entries as you go, and
+              review past progress at a glance. This all-in-one dashboard makes
+              managing your day simple, so building consistent habits becomes
+              effortless.
+            </p>
+          </div>
         </div>
       </div>
     </div>
