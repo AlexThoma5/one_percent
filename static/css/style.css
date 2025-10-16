@@ -237,8 +237,11 @@ body {
 
 /* Hide labels only for text/password inputs inside the card, keeps labels visible to wave tool - Code taken from chatGPT */
 .card form label[for="id_login"],
+.card form label[for="id_username"],
 .card form label[for="id_email"],
-.card form label[for="id_password"] {
+.card form label[for="id_password"],
+.card form label[for="id_password1"], 
+.card form label[for="id_password2"] {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
