@@ -175,11 +175,48 @@ body {
   text-decoration: none;
 }
 
+.category-widget {
+  background: rgb(10, 15, 36, 0.5);
+  border-radius: 26px;
+  max-width: 1365px;
+  margin: 0 auto;
+}
+
 .category-card {
   aspect-ratio: 5/4;
-  background-color: rgba(142, 142, 142, 0.7);
+  max-height: 220px;
+  margin: 0 auto;
+  background: rgb(10, 15, 36, 0.6);
+  box-shadow: 0 0 25px rgba(74, 168, 255, 0.2), 
+              0 0 40px rgba(212, 106, 255, 0.15);
   border-radius: 10px;
-  border: 1px solid white;
+  border: 0.5px solid white;
+}
+
+.category-icon {
+  font-size: 3rem;
+  color: #00c5b4;
+  margin: 0 auto;
+}
+
+.category-title {
+  font-size: 1rem;
+}
+
+.fa-dumbbell {
+  color: #31c500;
+}
+
+.fa-brain {
+  color: #6366f1; /* Indigo */
+}
+
+.fa-code {
+  color: #3b82f6; /* Blue */
+}
+
+.fa-bed {
+  color: #ec4899;
 }
 
 .card-title {
