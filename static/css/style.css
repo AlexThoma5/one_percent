@@ -1,12 +1,25 @@
 /* CSS Variables */
 :root {
-    --primary-font: ;
-    --secondary-font: ;
-    --background-color: #0a0f24;
-    --primary-color: ;
-    --hightlight-color: ;
-    --secondary-highlight-color: ;
-}
+
+  /* fonts */
+  --primary-font: ;
+  --secondary-font: ;
+
+  /* background colors */
+  --background-color: #0a0f24;
+  --background-glow-right: #4aa8ff;
+  --background-glow-left: #d46aff;
+
+  /* shadows */
+  --primary-shadow: 0 0 25px rgba(74, 168, 255, 0.2),
+                    0 0 40px rgba(212, 106, 255, 0.15);
+
+  /* card-backgrounds */
+  --card-bg-light: rgba(10, 15, 36, 0.5);
+  --card-bg-medium: rgba(10, 15, 36, 0.6);
+  --card-bg-dark: rgba(10, 15, 36, 0.7);
+  --card-bg-darker: rgba(10, 15, 36, 0.95);
+} 
 
 /* -------------- Base.html styles -------------- */
 
@@ -37,14 +50,13 @@ body {
 }
 
 .glow-blue {
-  background: #4aa8ff;
+  background: var(--background-glow-right);
   right: -20vw;
   bottom: 10vh;
 }
 
 .glow-pink {
-  background: #d46aff;
-  top: -10vw;
+  background: var(--background-glow-left);
   left: -15vw;
 }
 
@@ -129,23 +141,21 @@ body {
 }
 
 .content-section {
-  background: rgb(10, 15, 36, 0.7);
+  background: var(--card-bg-dark);
 }
 
 .grow-wrapper:hover {
-  background: rgb(10, 15, 36, 0.95);
+  background: var(--card-bg-darker);
   transition: all 0.35s ease-in-out;
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(74, 168, 255, 0.2), 
-              0 0 40px rgba(212, 106, 255, 0.15);
+  box-shadow: var(--primary-shadow);
 }
 
 .content-icon {
   border-radius: 50%;
   aspect-ratio: 1/1;
   height: 150px;
-  box-shadow: 0 0 25px rgba(74, 168, 255, 0.2), 
-              0 0 40px rgba(212, 106, 255, 0.15);
+  box-shadow: var(--primary-shadow);
 }
 
 .content-icon > i {
@@ -176,7 +186,7 @@ body {
 }
 
 .category-widget {
-  background: rgb(10, 15, 36, 0.5);
+  background: var(--card-bg-light);
   border-radius: 26px;
   max-width: 1200px;
   margin: 0 auto;
@@ -186,9 +196,8 @@ body {
   aspect-ratio: 5/4;
   max-height: 220px;
   margin: 0 auto;
-  background: rgb(10, 15, 36, 0.6);
-  box-shadow: 0 0 25px rgba(74, 168, 255, 0.2), 
-              0 0 40px rgba(212, 106, 255, 0.15);
+  background: var(--card-bg-medium);
+  box-shadow: var(--primary-shadow);
   border-radius: 10px;
   border: 0.5px solid white;
 }
@@ -229,11 +238,11 @@ body {
   width: 100%;
   max-width: 400px;
   margin-left: auto;
-  background: rgb(10, 15, 36, 0.5);
+  background: var(--card-bg-light);
   border-radius: 26px;
 }
 .stat-card {
-  background: rgb(10, 15, 36, 0.5);
+  background: var(--card-bg-light);
   border-radius: 16px;
   border: 0.5px solid white;
   font-size: 1.5rem;
@@ -279,9 +288,8 @@ body {
 .form-card {
   width: 100%;
   max-width: 400px;
-  background: rgb(10, 15, 36, 0.5);
-  box-shadow: 0 0 25px rgba(74, 168, 255, 0.2), 
-              0 0 40px rgba(212, 106, 255, 0.15);
+  background: var(--card-bg-light);
+  box-shadow: var(--primary-shadow);
   border-radius: 0.75rem;
   padding: 2rem;
   color: #e0e0e0;
