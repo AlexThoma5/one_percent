@@ -238,6 +238,7 @@ body {
   width: 100%;
   max-width: 400px;
   margin-left: auto;
+  margin-right:auto;
   background: var(--card-bg-light);
   border-radius: 26px;
 }
@@ -333,3 +334,13 @@ body {
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
+
+/* xxl devices for (larger desktops, 1200px and up) */
+
+@media screen and (min-width: 1400px) {
+
+    /* Keeps the chart container aligned with other content */
+    .chart-container {
+      margin-right: 100px;
+    }
+  }
