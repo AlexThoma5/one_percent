@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'home' as home_url %}
+{% url 'dashboard' as dash_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -46,6 +47,14 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
             {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a
+                class="nav-link {% if request.path == dash_url %}active"
+                aria-current="page{% endif %}"
+                href="{{ dash_url }}"
+                >Dashboard</a
+              >
+            </li>
             <li class="nav-item">
               <a
                 class="nav-link {% if request.path == logout_url %}active"
