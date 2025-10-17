@@ -335,6 +335,23 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
+/* -------------- Media Queries -------------- */
+
+/* Small devices for (screens 767px and below) */
+
+@media screen and (max-width: 767px) {
+
+    /* prevents category cards from spreading too far apart */
+    .category-widget {
+      max-width: 600px;
+    }
+
+    /* margin applied to center stat-card on smaller screens */
+    .stat-card {
+      margin: auto;
+    }
+}
+
 /* xxl devices for (larger desktops, 1200px and up) */
 
 @media screen and (min-width: 1400px) {
