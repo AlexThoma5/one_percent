@@ -24,10 +24,13 @@ def dashboard_view(request):
         labels.append(category.name)
         data.append(category.logs.filter(user=request.user).count())
 
+    log_count = zip(labels, data)
+
     return render(
         request,
         "dashboard/dashboard.html",
         {"categories": categories,
+         "log_count": log_count,
          "labels": labels,
          "data": data})
 

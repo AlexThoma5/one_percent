@@ -36,9 +36,26 @@
     </div>
   </div>
   <!-- chart row -->
-  <div class="row justify-content-center mt-4">
-    <div class="chart-container">
-      <canvas id="myChart"></canvas>
+  <div class="row justify-content-center">
+    <!-- chart col -->
+    <div class="col-12 col-md-6 mt-4">
+      <div class="chart-container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <!-- stat col -->
+    <div class="col-12 col-md-6 col-lg-4 mt-4">
+      <div class="card category-widget">
+        <div class="card-body text-light stat-card">
+        <h3 class="card-title text-center">Current Stats</h3>
+          {% for cat, count in log_count %}
+          <p class="mb-2 d-flex justify-content-around">
+            <span><strong>{{ cat }} :</strong></span>
+            <span>{{ count }}</span>
+          </p>
+          {% endfor %}
+        </div>
+      </div> 
     </div>
   </div>
 </div>
