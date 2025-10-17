@@ -225,6 +225,14 @@ body {
   text-decoration: none;
 }
 
+.chart-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  background: rgb(10, 15, 36, 0.5);
+  border-radius: 26px;
+}
+
 /* -------------- Category_detail pages -------------- */
 
 .log-title {
