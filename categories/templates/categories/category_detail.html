@@ -4,11 +4,13 @@
 {% block content %}
 <div class="container">
   <!-- Category Header -->
-  <div class="mb-4 text-center">
+  <div class="my-4 text-center">
     <h1 class="display-5 welcome">{{ category.name }}</h1>
   </div>
   <!-- Logs Section -->
-  <h2 class="h4 mb-3 welcome text-center">Logs</h2>
+  {% if logs %}
+  <h2 class="h4 mb-3 text-center">Track your {{ category.name }} logs below</h2>
+  {% endif %}
   <!-- Create new logs button -->
   <div class="row justify-content-center pb-3 text-start">
     <div class="col-12">
@@ -25,37 +27,39 @@
   <div class="row g-3">
     {% for log in logs %}
     <div class="col-12 col-md-6">
-      <div class="card shadow-sm border-0 h-100">
+      <div class="card log-card border-0 h-100">
         <div class="card-body">
           <div class="d-flex justify-content-between align-items-start gap-3">
             <div>
               <p class="card-title mb-1 fw-semibold log-title h5" id="logTitle{{ log.id }}">
                 {{ log.title }}
               </p>
-              <p class="text-muted small mb-2">
-                {{ log.created_on |date:"d M Y • H:i A" }}
+              <p class="time-text small mb-2">
+                {{ log.created_on|date:"d M y • H:i A" }}
               </p>
             </div>
             <div class="icon-width">
               {% if user.is_authenticated and log.user == user %}
               <button
                 type="button"
-                class="text-secondary me-2 edit-pen icon-btn-style btn-edit"
+                class="me-2 edit-pen icon-btn-style btn-edit"
                 data-log_id="{{ log.id }}"
+                aria-label="Edit-log {{ log.id }}"
               >
-                <i class="fa-solid fa-pen grow"></i>
+                <i class="fa-solid fa-pen grow" aria-hidden="true"></i>
               </button>
               <button
                 type="button"
-                class="text-danger icon-btn-style btn-delete"
+                class="icon-btn-style btn-delete"
                 data-log_id="{{ log.id }}"
+                aria-label="Delete log {{ log.id }}"
               >
-                <i class="fa-solid fa-trash grow"></i>
+                <i class="fa-solid fa-trash grow" aria-hidden="true"></i>
               </button>
               {% endif %}
             </div>
           </div>
-          <p class="card-text mt-2 mb-0 text-muted" id='log{{ log.id }}'>{{ log.content }}</p>
+          <p class="card-text mt-2 mb-0 log-content" id='log{{ log.id }}'>{{ log.content }}</p>
         </div>
       </div>
     </div>

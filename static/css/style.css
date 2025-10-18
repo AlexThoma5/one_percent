@@ -252,9 +252,25 @@ body {
 
 /* -------------- Category_detail pages -------------- */
 
+.log-card {
+  background: var(--card-bg-dark);
+  box-shadow: var(--primary-shadow);
+}
+
 .log-title {
-  color: #006eff;
+  color: #ffffff;
   text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.time-text {
+  color: #a0a0a0bf;
+}
+
+.log-content {
+  color: #d1d5db;
+  font-size: 1rem;
 }
 
 .icon-btn-style {
@@ -262,6 +278,14 @@ body {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+.edit-pen {
+  color: #7FDBFF;
+}
+
+.btn-delete {
+  color: #f53c3c;
 }
 
 .icon-width {
