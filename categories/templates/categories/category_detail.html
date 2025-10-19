@@ -9,8 +9,11 @@
   </div>
   <!-- Logs Section -->
   {% if logs %}
-  <h2 class="h4 mb-3 text-center">Track your {{ category.name }} logs below</h2>
+  <h2 class="h4 mb-3 text-center">Your {{ category.name }} journey — today’s update?</h2>
+  {% else %}
+  <h2 class="h4 mb-3 text-center">Begin tracking your {{ category.name }} progress here.</h2>
   {% endif %}
+
   <!-- Create new logs button -->
   <div class="row justify-content-center pb-3 text-start">
     <div class="col-12">
@@ -74,7 +77,7 @@
     {% endfor %}
   </div>
   {% else %}
-  <div class="alert alert-info">No logs available for this category yet.</div>
+  <div class="alert alert-info">Click the 'Add Entry' button to get started tracking your logs.</div>
   {% endif %}
 </div>
 
