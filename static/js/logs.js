@@ -27,8 +27,8 @@ for (let button of editButtons) {
     let logContent = document.getElementById(`log${logId}`).innerText;
 
     // Find the input fields inside the edit modal only
-    let logModalText = editModal.querySelector("#id_content");
-    let logModalTitle = editModal.querySelector("#id_title");
+    let logModalText = editModal.querySelector("#id_edit-content");
+    let logModalTitle = editModal.querySelector("#id_edit-title");
 
     // Fill the form fields
     logModalText.value = logContent;

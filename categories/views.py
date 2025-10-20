@@ -46,13 +46,15 @@ def category_detail(request, slug):
             messages.add_message(request, messages.ERROR, 'Something went wrong — but your effort still matters.')
 
     log_form = LogForm()
+    edit_log_form = LogForm(prefix="edit")
 
     return render(
         request,
         "categories/category_detail.html",
         {"category": category,
          "logs": logs,
-         "log_form": log_form
+         "log_form": log_form,
+         "edit_log_form": edit_log_form,
          },
     )
 
@@ -71,7 +73,7 @@ def log_edit(request, slug, log_id):
     """
     if request.method == "POST":
         log = get_object_or_404(Log, pk=log_id)
-        log_form = LogForm(data=request.POST, instance=log)
+        log_form = LogForm(data=request.POST, instance=log, prefix="edit")
 
         if log_form.is_valid() and log.user == request.user:
             log_form.save()
