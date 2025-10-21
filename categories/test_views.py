@@ -8,7 +8,7 @@ from .models import Category
 class TestCategoriesViews(TestCase):
 
     def setUp(self):
-
+        """ Creates user and test category"""
         self.user = User.objects.create_user(
             username="myUsername",
             password="myPassword",
@@ -19,6 +19,8 @@ class TestCategoriesViews(TestCase):
         self.category.save()
 
     def test_render_category_detail_page_with_log_form(self):
+        """ Verifies get request for category_detail page
+        containing the log_form """
         self.client.login(username="myUsername", password="myPassword")
         response = self.client.get(reverse(
             'category_detail', args=['test-name']))
