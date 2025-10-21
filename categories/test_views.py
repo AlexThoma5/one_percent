@@ -8,7 +8,7 @@ from .models import Category
 class TestCategoriesViews(TestCase):
 
     def setUp(self):
-        """ Creates user and test category"""
+        """ Creates user and test category """
         self.user = User.objects.create_user(
             username="myUsername",
             password="myPassword",
@@ -28,3 +28,17 @@ class TestCategoriesViews(TestCase):
         self.assertIn(b"test-name", response.content)
         self.assertIsInstance(
             response.context['log_form'], LogForm)
+
+    def test_successful_log_submission(self):
+        """ Test for posting a log on a category """
+        self.client.login(username="myUsername", password="myPassword")
+        log_data = {
+            'title': 'This is a test log.'
+        }
+        response = self.client.post(reverse(
+            'category_detail', args=['test-name']), log_data)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'Great job! Your new log has been added.',
+            response.content
+        )
