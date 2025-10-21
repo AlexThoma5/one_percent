@@ -4,9 +4,8 @@ from django.test import TestCase
 
 
 class TestHomeView(TestCase):
-
     def setUp(self):
-
+        """ Creates user instance for tests"""
         self.user = User.objects.create_user(
             username="myUsername",
             password="myPassword",
@@ -14,11 +13,13 @@ class TestHomeView(TestCase):
         )
 
     def test_redirects_authenticated_user_to_dashboard(self):
+        """ Test for redirect to dashboard page if user is authenticated """
         self.client.login(username="myUsername", password="myPassword")
         response = self.client.get(reverse('home'))
         self.assertRedirects(response, reverse('dashboard'))
 
     def test_redirects_anon_user_to_landing(self):
+        """ Test for redirect to landing page if user is not authenticated """
         response = self.client.get(reverse('home'))
         self.assertRedirects(response, reverse('landing'))
 
