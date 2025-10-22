@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Roboto:wdth,wght@75..100,100..900&display=swap');
+/* Google font imports */
+
 /* CSS Variables */
 :root {
 
   /* fonts */
-  --primary-font: ;
-  --secondary-font: ;
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Inter', sans-serif;
 
   /* background colors */
   --background-color: #0a0f24;
@@ -19,7 +22,17 @@
   --card-bg-medium: rgba(10, 15, 36, 0.6);
   --card-bg-dark: rgba(10, 15, 36, 0.7);
   --card-bg-darker: rgba(10, 15, 36, 0.95);
-} 
+}
+
+/* -------------- global styles -------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--secondary-font);
+}
+
+body {
+  font-family: var(--primary-font);
+}
 
 /* -------------- Base.html styles -------------- */
 
@@ -110,7 +123,7 @@ body {
     padding-bottom: 1rem;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.15rem;
 }
 
 .navbar-custom .navbar-brand {
