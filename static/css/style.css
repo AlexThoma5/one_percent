@@ -38,6 +38,17 @@ body {
   font-family: var(--primary-font);
 }
 
+.btn-custom {
+  color: white;
+  background: var(--card-bg-dark);
+  box-shadow: var(--primary-shadow);
+}
+
+.btn-custom:hover {
+  background-color: var(--card-bg-darker);
+  color: #00c5b4;
+}
+
 /* -------------- Base.html styles -------------- */
 
 /* Custom glow background */

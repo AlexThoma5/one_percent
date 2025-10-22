@@ -7,15 +7,18 @@
     <div class="my-4 text-center">
       <h1 class="display-5 welcome">{{ category.name }}</h1>
     </div>
-    <!-- Logs Section -->
+    <!-- Category message -->
     {% if logs %}
       <h2 class="h4 mb-3 text-center">Your {{ category.name }} journey — today’s update?</h2>
     {% else %}
       <h2 class="h4 mb-3 text-center">Begin tracking your {{ category.name }} progress here.</h2>
     {% endif %}
-    <!-- Create new logs button -->
-    <div class="row justify-content-center pb-3 text-start">
-      <div class="col-12">
+    <!-- Home and create new logs button -->
+    <div class="row pb-3">
+      <div class="col-12 d-flex justify-content-between">
+        <a href="{% url 'dashboard' %}" class="btn btn-custom d-flex align-items-center">
+          <i class="fa-solid fa-house me-2"></i>Home
+        </a>
         <button class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#addLogModal">Add Entry</button>
