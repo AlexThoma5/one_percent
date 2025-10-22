@@ -8,10 +8,6 @@ from .forms import LogForm
 # Create your views here.
 
 
-def test_view(request):
-    return HttpResponse("This is a test view for categories app")  # Temporary response for testing
-
-
 @login_required
 def category_detail(request, slug):
     """
@@ -22,9 +18,11 @@ def category_detail(request, slug):
     ``category``
         An instance of :model:`categories.Category`.
     ``logs``
-        All logs in relation to the category tied to individual user`.
+        All logs related to the category for the currently authenticated user`.
     ``log_form``
-    An instance of :form:`categories.LogForm`
+        An instance of :form:`categories.LogForm` for creating new logs.
+    ``edit_log_form``
+        An instance of :form:`categories.LogForm` for editing existing logs.
     **Template:**
 
     :template:`categories/category_detail.html`
@@ -62,14 +60,14 @@ def category_detail(request, slug):
 @login_required
 def log_edit(request, slug, log_id):
     """
-    View to for user to edit logs
+    Allow a user to edit an existing :model:`categories.Log`.
 
     **Context**
 
     ``log``
-        A single log related to the category.
+        The specific :model:`categories.Log` instance being edited.
     ``log_form``
-    An instance of :form:`categories.LogForm`
+        An instance of :form:`categories.LogForm`
     """
     if request.method == "POST":
         log = get_object_or_404(Log, pk=log_id)
@@ -87,7 +85,12 @@ def log_edit(request, slug, log_id):
 @login_required
 def log_delete(request, slug, log_id):
     """
-    view to delete log
+    Delete an individual comment.
+
+    **Context**
+
+    ``log``
+        The specific :model:`categories.Log` instance being deleted.
     """
     log = get_object_or_404(Log, pk=log_id)
 
