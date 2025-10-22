@@ -2,211 +2,158 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container">
-  <!-- Category Header -->
-  <div class="my-4 text-center">
-    <h1 class="display-5 welcome">{{ category.name }}</h1>
-  </div>
-  <!-- Logs Section -->
-  {% if logs %}
-  <h2 class="h4 mb-3 text-center">Your {{ category.name }} journey — today’s update?</h2>
-  {% else %}
-  <h2 class="h4 mb-3 text-center">Begin tracking your {{ category.name }} progress here.</h2>
-  {% endif %}
-
-  <!-- Create new logs button -->
-  <div class="row justify-content-center pb-3 text-start">
-    <div class="col-12">
-      <button
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#addLogModal"
-      >
-        Add Entry
-      </button>
+  <div class="container">
+    <!-- Category Header -->
+    <div class="my-4 text-center">
+      <h1 class="display-5 welcome">{{ category.name }}</h1>
     </div>
-  </div>
-  {% if logs %}
-  <div class="row g-3">
-    {% for log in logs %}
-    <div class="col-12 col-md-6">
-      <div class="card log-card border-0 h-100">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-start gap-3">
-            <div>
-              <p
-                class="card-title mb-1 fw-semibold log-title h5"
-                id="logTitle{{ log.id }}"
-              >
-                {{ log.title }}
-              </p>
-              <p class="time-text small mb-2">
-                {{ log.created_on|date:"d M y • H:i A" }}
-                {% if log.updated_on|date:"d M Y H:i:s" != log.created_on|date:"d M Y H:i:s" %}
-                <span class="small time-text">- Edited {{ log.updated_on|date:"d M y • H:i A" }}</span>
-                {% endif %}
-              </p>
-            </div>
-            <div class="icon-width">
-              {% if user.is_authenticated and log.user == user %}
-              <button
-                type="button"
-                class="me-2 edit-pen icon-btn-style btn-edit"
-                data-log_id="{{ log.id }}"
-                aria-label="Edit-log {{ log.id }}"
-              >
-                <i class="fa-solid fa-pen grow" aria-hidden="true"></i>
-              </button>
-              <button
-                type="button"
-                class="icon-btn-style btn-delete"
-                data-log_id="{{ log.id }}"
-                aria-label="Delete log {{ log.id }}"
-              >
-                <i class="fa-solid fa-trash grow" aria-hidden="true"></i>
-              </button>
-              {% endif %}
+    <!-- Logs Section -->
+    {% if logs %}
+      <h2 class="h4 mb-3 text-center">Your {{ category.name }} journey — today’s update?</h2>
+    {% else %}
+      <h2 class="h4 mb-3 text-center">Begin tracking your {{ category.name }} progress here.</h2>
+    {% endif %}
+    <!-- Create new logs button -->
+    <div class="row justify-content-center pb-3 text-start">
+      <div class="col-12">
+        <button class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#addLogModal">Add Entry</button>
+      </div>
+    </div>
+    {% if logs %}
+      <div class="row g-3">
+        {% for log in logs %}
+          <div class="col-12 col-md-6">
+            <div class="card log-card border-0 h-100">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start gap-3">
+                  <div>
+                    <p class="card-title mb-1 fw-semibold log-title h5"
+                       id="logTitle{{ log.id }}">{{ log.title }}</p>
+                    <p class="time-text small mb-2">
+                      {{ log.created_on|date:"d M y • H:i A" }}
+                      {% if log.updated_on|date:"d M Y H:i:s" != log.created_on|date:"d M Y H:i:s" %}
+                        <span class="small time-text">- Edited {{ log.updated_on|date:"d M y • H:i A" }}</span>
+                      {% endif %}
+                    </p>
+                  </div>
+                  <div class="icon-width">
+                    {% if user.is_authenticated and log.user == user %}
+                      <button type="button"
+                              class="me-2 edit-pen icon-btn-style btn-edit"
+                              data-log_id="{{ log.id }}"
+                              aria-label="Edit-log {{ log.id }}">
+                        <i class="fa-solid fa-pen grow" aria-hidden="true"></i>
+                      </button>
+                      <button type="button"
+                              class="icon-btn-style btn-delete"
+                              data-log_id="{{ log.id }}"
+                              aria-label="Delete log {{ log.id }}">
+                        <i class="fa-solid fa-trash grow" aria-hidden="true"></i>
+                      </button>
+                    {% endif %}
+                  </div>
+                </div>
+                <p class="card-text mt-2 mb-0 log-content" id="log{{ log.id }}">{{ log.content }}</p>
+              </div>
             </div>
           </div>
-          <p class="card-text mt-2 mb-0 log-content" id="log{{ log.id }}">
-            {{ log.content }}
-          </p>
-        </div>
+        {% endfor %}
       </div>
-    </div>
-    {% endfor %}
+    {% else %}
+      <div class="alert alert-info">Click the 'Add Entry' button to get started tracking your logs.</div>
+    {% endif %}
   </div>
-  {% else %}
-  <div class="alert alert-info">Click the 'Add Entry' button to get started tracking your logs.</div>
-  {% endif %}
-</div>
-
-<!-- Bootstrap Modal for adding logs -->
-<div
-  class="modal fade"
-  data-bs-theme="dark"
-  id="addLogModal"
-  tabindex="-1"
-  aria-labelledby="addLogModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <form method="post" id="logForm">
-        {% csrf_token %}
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="addLogModalLabel">
-            Add {{ category.name }} log
-          </h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body container">
-          <div class="row justify-content-center p-2">
-            <div class="col">{{ log_form | crispy }}</div>
+  <!-- Bootstrap Modal for adding logs -->
+  <div class="modal fade"
+       data-bs-theme="dark"
+       id="addLogModal"
+       tabindex="-1"
+       aria-labelledby="addLogModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form method="post" id="logForm">
+          {% csrf_token %}
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addLogModalLabel">Add {{ category.name }} log</h1>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
           </div>
-        </div>
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
-          <button id="addSubmitButton" type="submit" class="btn btn-danger">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Bootstrap Modal for editing logs -->
-<div
-  class="modal fade"
-  data-bs-theme="dark"
-  id="editLogModal"
-  tabindex="-1"
-  aria-labelledby="editLogModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <form method="post" id="editLogForm">
-        {% csrf_token %}
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="editLogModalLabel">
-            Edit {{ category.name }} log
-          </h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body container">
-          <div class="row justify-content-center p-2">
-            <div class="col">{{ edit_log_form | crispy }}</div>
+          <div class="modal-body container">
+            <div class="row justify-content-center p-2">
+              <div class="col">{{ log_form | crispy }}</div>
+            </div>
           </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="addSubmitButton" type="submit" class="btn btn-danger">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap Modal for editing logs -->
+  <div class="modal fade"
+       data-bs-theme="dark"
+       id="editLogModal"
+       tabindex="-1"
+       aria-labelledby="editLogModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form method="post" id="editLogForm">
+          {% csrf_token %}
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editLogModalLabel">Edit {{ category.name }} log</h1>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <div class="modal-body container">
+            <div class="row justify-content-center p-2">
+              <div class="col">{{ edit_log_form | crispy }}</div>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="editSubmitButton" type="submit" class="btn btn-danger">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Delete confirmation modal -->
+  <div class="modal fade"
+       data-bs-theme="dark"
+       id="deleteModal"
+       tabindex="-1"
+       aria-labelledby="deleteModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete log?</h5>
+          <button type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
         </div>
-        <!-- Modal footer -->
+        <div class="modal-body">Are you sure you want to delete your log? This action cannot be undone.</div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Cancel
-          </button>
-          <button id="editSubmitButton" type="submit" class="btn btn-danger">
-            Update
-          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
         </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Delete confirmation modal -->
-<div
-  class="modal fade"
-  data-bs-theme="dark"
-  id="deleteModal"
-  tabindex="-1"
-  aria-labelledby="deleteModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Delete log?</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to delete your log? This action cannot be undone.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
-        </button>
-        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
-</div>
-{% endblock content %} {% block extras %}
-<script src="{% static 'js/logs.js' %}"></script>
+{% endblock content %}
+{% block extras %}
+  <script src="{% static 'js/logs.js' %}"></script>
 {% endblock %}

@@ -1,35 +1,33 @@
 {% extends "base.html" %}
-
 {% load i18n %}
 {% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
-
+{% block head_title %}
+  {% trans "Sign In" %}
+{% endblock head_title %}
 {% block content %}
-<div class="d-flex justify-content-center align-items-center">
-  <div class="card rounded-3 p-4 mt-5 form-card" data-aos="fade-up" data-aos-once="true" data-aos-duration="1500">
-    <h1 class="text-center mb-4 text-light h2">{% trans "Sign In" %}</h1>
-
-    <p class="text-center text-light medium mb-4">
-      {% blocktrans %}If you have not created an account yet, then please
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="card rounded-3 p-4 mt-5 form-card"
+         data-aos="fade-up"
+         data-aos-once="true"
+         data-aos-duration="1500">
+      <h1 class="text-center mb-4 text-light h2">{% trans "Sign In" %}</h1>
+      <p class="text-center text-light medium mb-4">
+        {% blocktrans %}If you have not created an account yet, then please
       <a href="{{ signup_url }}" class="form-links">sign up</a> first.{% endblocktrans %}
-    </p>
-
-    <form method="POST" action="{% url 'account_login' %}">
-      {% csrf_token %}
-
-      {{ form.as_p }}
-
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
-
-      <div class="text-center mb-3">
-        <a href="{% url 'account_reset_password' %}" class="medium form-links">{% trans "Forgot Password?" %}</a>
-      </div>
-
-      <button class="btn btn-primary w-100 py-2">{% trans "Sign In" %}</button>
-    </form>
+      </p>
+      <form method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+          <input type="hidden"
+                 name="{{ redirect_field_name }}"
+                 value="{{ redirect_field_value }}" />
+        {% endif %}
+        <div class="text-center mb-3">
+          <a href="{% url 'account_reset_password' %}" class="medium form-links">{% trans "Forgot Password?" %}</a>
+        </div>
+        <button class="btn btn-primary w-100 py-2">{% trans "Sign In" %}</button>
+      </form>
+    </div>
   </div>
-</div>
 {% endblock content %}

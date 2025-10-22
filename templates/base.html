@@ -4,17 +4,14 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-
 <!DOCTYPE html>
 <html class="h-100" lang="en">
   <head>
     <!-- BootStrap CSS link -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <!-- Custom CSS -->
@@ -33,53 +30,35 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container px-5">
         <a class="navbar-brand" href="{% url 'home' %}">One Percent</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto">
             {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a
-                class="nav-link {% if request.path == dash_url %}active"
-                aria-current="page{% endif %}"
-                href="{{ dash_url }}"
-                >Dashboard</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link {% if request.path == logout_url %}active"
-                aria-current="page{% endif %}"
-                href="{% url 'account_logout' %}"
-                >Logout</a
-              >
-            </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == dash_url %}active" aria-current="page{% endif %}"
+                   href="{{ dash_url }}">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
+                   href="{% url 'account_logout' %}">Logout</a>
+              </li>
             {% else %}
-            <li class="nav-item">
-              <a
-                class="nav-link {% if request.path == signup_url %}active"
-                aria-current="page{% endif %}"
-                href="{% url 'account_signup' %}"
-                >Sign Up</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link {% if request.path == login_url %}active"
-                aria-current="page{% endif %}"
-                href="{% url 'account_login' %}"
-                >Login</a
-              >
-            </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                   href="{% url 'account_signup' %}">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}"
+                   href="{% url 'account_login' %}">Login</a>
+              </li>
             {% endif %}
           </ul>
         </div>
@@ -90,53 +69,56 @@
       <div class="row justify-content-center">
         <div class="col-auto">
           {% for message in messages %}
-          <!-- Notification -->
-          <div class="notification alert d-flex align-items-center justify-content-between rounded-4 p-3 px-4 gap-3 fade show {{ message.tags }}" role="alert">
-            <!-- Icon -->
-            <div class="d-flex justify-content-center align-items-center notification-icon">
-              {% if "success" in message.tags %}
-              <i class="fa-solid fa-check"></i>
-              {% else %}
-              <i class="fa-solid fa-xmark"></i>
-              {% endif %}
+            <!-- Notification -->
+            <div class="notification alert d-flex align-items-center justify-content-between rounded-4 p-3 px-4 gap-3 fade show {{ message.tags }}"
+                 role="alert">
+              <!-- Icon -->
+              <div class="d-flex justify-content-center align-items-center notification-icon">
+                {% if "success" in message.tags %}
+                  <i class="fa-solid fa-check"></i>
+                {% else %}
+                  <i class="fa-solid fa-xmark"></i>
+                {% endif %}
+              </div>
+              <!-- Content -->
+              <div class="flex-grow-1">
+                <h5 class="fw-bold mb-1 text-light">
+                  {% if "success" in message.tags %}
+                    Success
+                  {% else %}
+                    Error
+                  {% endif %}
+                </h5>
+                <p class="mb-0">{{ message|safe }}</p>
+              </div>
+              <!-- Close button -->
+              <button type="button"
+                      class="btn-close btn-close-white small"
+                      data-bs-dismiss="alert"
+                      aria-label="Close"></button>
             </div>
-            <!-- Content -->
-            <div class="flex-grow-1">
-              <h5 class="fw-bold mb-1 text-light">{% if "success" in message.tags %}Success{% else %}Error{% endif %}</h5>
-              <p class="mb-0">{{ message|safe }}</p>
-            </div>
-            <!-- Close button -->
-            <button type="button" class="btn-close btn-close-white small" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
           {% endfor %}
         </div>
       </div>
     </div>
-
     <!-- Page Content -->
     <main class="flex-grow-1 mt-5 pt-4">
       {% block content %}
-      <!-- Content goes here -->
+        <!-- Content goes here -->
       {% endblock content %}
     </main>
-
     <!-- BootStrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <!-- Initialise AOS -->
-    <script>
-      AOS.init();
-    </script>
+    <script>AOS.init();</script>
     <!-- Font Awesome Kit -->
-    <script
-      src="https://kit.fontawesome.com/e1ecb81146.js"
-      crossorigin="anonymous"
-    ></script>
-    {% block extras %} {% endblock %}
+    <script src="https://kit.fontawesome.com/e1ecb81146.js"
+            crossorigin="anonymous"></script>
+    {% block extras %}
+    {% endblock %}
   </body>
 </html>
