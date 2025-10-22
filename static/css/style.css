@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Roboto:wdth,wght@75..100,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Roboto:wdth,wght@75..100,100..900&display=swap");
 /* Google font imports */
 
 /* CSS Variables */
 :root {
-
   /* fonts */
-  --primary-font: 'Roboto', sans-serif;
-  --secondary-font: 'Inter', sans-serif;
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Inter", sans-serif;
 
   /* background colors */
   --background-color: #0a0f24;
@@ -15,7 +14,7 @@
 
   /* shadows */
   --primary-shadow: 0 0 25px rgba(74, 168, 255, 0.2),
-                    0 0 40px rgba(212, 106, 255, 0.15);
+    0 0 40px rgba(212, 106, 255, 0.15);
 
   /* card-backgrounds */
   --card-bg-light: rgba(10, 15, 36, 0.5);
@@ -26,7 +25,12 @@
 
 /* -------------- global styles -------------- */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--secondary-font);
 }
 
@@ -49,7 +53,7 @@ body {
   position: fixed;
   inset: 0;
   overflow: hidden;
-  z-index: -1; 
+  z-index: -1;
 }
 
 .glow {
@@ -74,8 +78,16 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 0.7;}
-  50% { transform: scale(1.4); opacity: 0.9;}
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0.9;
+  }
 }
 
 /* Notification styles */
@@ -84,9 +96,7 @@ body {
   margin-top: 80px;
   max-width: 448px;
   width: 100%;
-  background: linear-gradient(
-    90deg, #084431 0%, #232631 40%
-  );
+  background: linear-gradient(90deg, #084431 0%, #232631 40%);
   color: #898c97;
 }
 
@@ -100,9 +110,7 @@ body {
 }
 
 .notification.error {
-  background: linear-gradient(
-    90deg, #480607 0%, #232631 40%
-  );
+  background: linear-gradient(90deg, #480607 0%, #232631 40%);
 }
 
 .notification.error .notification-icon {
@@ -111,19 +119,19 @@ body {
 }
 
 .alert.fade {
-  transition: opacity 1s ease; 
+  transition: opacity 1s ease;
 }
 
 /* Header */
 
 .navbar-custom {
-    background-color: rgb(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.15rem;
+  background-color: rgb(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
 }
 
 .navbar-custom .navbar-brand {
@@ -140,14 +148,16 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 5rem); /* min 2.5rem, fluid 6vw, max 5rem */
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  /* min 2.5rem, fluid 6vw, max 5rem */
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-  font-size: clamp(1.25rem, 2.5vw, 2rem); /* min 1.25rem, fluid 2.5vw, max 2rem */
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  /* min 1.25rem, fluid 2.5vw, max 2rem */
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 1.5rem;
@@ -223,6 +233,7 @@ body {
 
 .category-title {
   font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .fa-dumbbell {
@@ -230,11 +241,13 @@ body {
 }
 
 .fa-brain {
-  color: #6366f1; /* Indigo */
+  color: #6366f1;
+  /* Indigo */
 }
 
 .fa-code {
-  color: #3b82f6; /* Blue */
+  color: #3b82f6;
+  /* Blue */
 }
 
 .fa-bed {
@@ -251,10 +264,11 @@ body {
   width: 100%;
   max-width: 400px;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
   background: var(--card-bg-light);
   border-radius: 26px;
 }
+
 .stat-card {
   background: var(--card-bg-light);
   border-radius: 16px;
@@ -272,7 +286,7 @@ body {
 
 .log-title {
   color: #ffffff;
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 600;
   font-size: 1.2rem;
 }
@@ -294,7 +308,7 @@ body {
 }
 
 .edit-pen {
-  color: #7FDBFF;
+  color: #7fdbff;
 }
 
 .btn-delete {
@@ -344,36 +358,35 @@ body {
 .card form label[for="id_password"],
 .card form label[for="id_password1"],
 .card form label[for="id_password2"] {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
 }
 
 /* Code taken from chatGPT */
 .card form input[type="text"],
 .card form input[type="email"],
 .card form input[type="password"] {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 1rem;
-    border-radius: 0.375rem;
-    border: 1px solid #ced4da;
-    font-size: 1rem;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
 }
-
 
 /* focus effect - Code taken from chatGPT */
 .card form input[type="text"]:focus,
 .card form input[type="email"]:focus,
 .card form input[type="password"]:focus {
-    border-color: #86b7fe;
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 /* -------------- Media Queries -------------- */
@@ -381,24 +394,22 @@ body {
 /* Small devices for (screens 767px and below) */
 
 @media screen and (max-width: 767px) {
+  /* prevents category cards from spreading too far apart */
+  .category-widget {
+    max-width: 600px;
+  }
 
-    /* prevents category cards from spreading too far apart */
-    .category-widget {
-      max-width: 600px;
-    }
-
-    /* margin applied to center stat-card on smaller screens */
-    .stat-card {
-      margin: auto;
-    }
+  /* margin applied to center stat-card on smaller screens */
+  .stat-card {
+    margin: auto;
+  }
 }
 
 /* xxl devices for (larger desktops, 1200px and up) */
 
 @media screen and (min-width: 1400px) {
-
-    /* Keeps the chart container aligned with other content */
-    .chart-container {
-      margin-right: 100px;
-    }
+  /* Keeps the chart container aligned with other content */
+  .chart-container {
+    margin-right: 100px;
   }
+}
