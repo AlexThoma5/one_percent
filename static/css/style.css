@@ -153,6 +153,13 @@ body {
   font-size: 0.8rem;
 }
 
+/* footer */
+
+.footer-custom {
+  background-color: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
 /* -------------- landing.html styles -------------- */
 .hero {
   height: 70vh;
