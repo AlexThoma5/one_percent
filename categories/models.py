@@ -22,7 +22,8 @@ class Category(models.Model):
 
 class Log(models.Model):
     """
-    Stores a single log entry related to :model:`auth.user`.
+    Stores a single log entry related to :model:`auth.user`
+    and :model:`categories.Category`
     """
     title = models.CharField(max_length=50)
     content = models.TextField(blank=True)  # Optional field for extra notes
