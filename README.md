@@ -7,11 +7,11 @@ Developer: Alex Thomas ([AlexThoma5](https://www.github.com/AlexThoma5))
 [![GitHub repo size](https://img.shields.io/github/repo-size/AlexThoma5/one_percent)](https://www.github.com/AlexThoma5/one_percent)
 [![badge](https://img.shields.io/badge/deployment-Heroku-purple)](https://one-percent-6389037dbddb.herokuapp.com)
 
-⚠️ PROJECT INTRODUCTION AND RATIONALE⚠️
+One Percent is a personal growth and habit-tracking web application. It helps users focus on small, consistent improvements. Its name reflects the idea that getting 1% better every day leads to remarkable progress. Users log daily updates across categories like Body, Mind, Skills, and Habits. The simple but powerful dashboard allows users to visualise and reflect on their journey.
 
-In this section, include a few paragraphs providing an overview of your project. Essentially, this part is your "sales pitch". Describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience. Also, assessors lately have been asking that students explain "why" they opted to do a project about this particular topic/subject, so be sure to explain what made you choose this particular theme/concept/subject/idea. This is the project "rationale".
+The goal of the project is to encourage consistency, reflection, and accountability. Users create and edit logs in various growth categories. Progress appears visually through charts. Users track daily efforts in one convenient place. With both structure and flexibility, One Percent supports lasting habits.
 
-⚠️ --- END --- ⚠️
+I chose to develop One Percent for my MS3 project because I have always been interested in self-development, and I felt that putting myself in the user’s shoes would help me design a more effective application. The concept of improving “one percent each day” resonates with me personally, and this project provided an opportunity to translate that philosophy into a functional and meaningful tool that others can use to achieve their goals.
 
 🛑 README NOTES 🛑
 
@@ -45,50 +45,52 @@ source: [one_percent amiresponsive](https://ui.dev/amiresponsive?url=https://one
 
 ### The 5 Planes of UX
 
-⚠️ NOTE: make sure to update the text below to match your own project! ⚠️
-
 #### 1. Strategy
 
 **Purpose**
-- Provide blog owners with tools to create, manage, and moderate engaging blog content and user interactions.
-- Offer users and guests an intuitive platform to explore, engage, and contribute to blog discussions.
+- Provide users with a platform to track, log and reflect on their personal growth and daily habits.
+- Offer a simple and intuitive dashboard to visualise progress across categories chosen by the site owner.
 
 **Primary User Needs**
-- Blog owners need seamless tools for publishing and managing posts and comments.
-- Registered users need the ability to engage with blog content through comments and account features.
-- Guests need the ability to browse and enjoy blog content without registration.
+- Users need an easy way to create, edit, and review logs for different personal growth categories.
+- Users need visual tools, like charts, to understand their progress over time.
 
 **Business Goals**
-- Foster a dynamic blogging platform with active user participation.
-- Build a sense of community through discussions and user engagement.
-- Ensure easy blog content management for owners.
+- Promote self-improvement through consistency and incremental progress.
+- Ensure a clean, user-friendly interface that makes tracking personal growth simple and enjoyable.
+- Ensure easy category management for owners.
 
 #### 2. Scope
 
 **[Features](#features)** (see below)
 
 **Content Requirements**
-- Blog post management (create, update, delete, and preview).
-- Comment moderation and management tools.
-- User account features (register, log in, edit/delete comments).
-- Notification system for comment approval status.
+- Ability for users to create, update, and delete personal logs in categories such as Body, Mind, Skills, and Habits.
+- Visualisation tools (charts and summaries) to display log data. 
+- User account features (register, log in, edit/delete personal logs).
+- Notification system for successful/unsuccessful log actions (add/edit/delete).
 - 404 error page for lost users.
 
 #### 3. Structure
 
 **Information Architecture**
 - **Navigation Menu**:
-  - Links to Home, Blog Posts, Login/Register, and Dashboard (for blog owners).
+  - Links to Dashboard and Log Out (for logged-in users).
+  - Links to Sign Up and Log In (for guest users).
 - **Hierarchy**:
-  - Blog content displayed prominently for easy browsing.
-  - Clear call-to-action buttons for account creation and engagement (e.g., commenting).
+  - Landing Page: The main content and visuals introduce the app’s purpose, with a prominent Sign Up call-to-action to encourage new users to register.
+  - Dashboard: This page is the central hub for users once logged in. It allows users to quickly see progress in different categories through charts and easily navigate to individual category pages. 
+  - Category Detail Pages: These pages are displayed prominently for logging and reviewing progress. The Add Log button is clearly visible, making it easy for users to create new entries.
+  - Log Cards: Each log entry includes Edit and Delete icons, allowing users to manage their logs directly from the category page using modals, keeping the UI clean and uncluttered.
 
 **User Flow**
-1. Guest users browse blog content → read posts and see commenter names.
-2. Guest users register for an account → log in to leave comments.
-3. Registered users leave comments → receive a pending approval notification.
-4. Blog owners create, update, and manage posts → moderate comments.
-5. Blog owners approve or reject comments → manage user interactions.
+1. Guest users browse landing page → see and overview of the app and its benefits.
+2. Guest users click the sign-up CTA → register for an account.
+3. Registered users log in → arrive at personal dashboard.
+4. Registered users on their dashboard → view all categories and navigate to category detail page.
+5. Registered users arrive at category page → prompted to add logs.
+6. Registered users manage logs → create, edit or delete entries.
+7. Returning users on the Dashboard → view categories and data visuals of progress if logs exist.
 
 #### 4. Skeleton
 
