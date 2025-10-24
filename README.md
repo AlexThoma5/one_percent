@@ -104,34 +104,28 @@ source: [one_percent amiresponsive](https://ui.dev/amiresponsive?url=https://one
 
 ### Colour Scheme
 
-⚠️INSTRUCTIONS ⚠️
+The website uses a dark, atmospheric theme with subtle glowing gradients and layered transparency.
+Rather than solid backgrounds, components use semi-transparent overlays that let the dynamic background shine through. I've always been a huge fan of Apple and their simple yet beautiful UIs. This led me down the path of using opacity and layering to create depth and a modern feel throughout my site.
 
-Explain your colors and color scheme. Consider adding a link and screenshot for your color scheme using [coolors](https://coolors.co/generate).
+I used [coolors.co](https://coolors.co/0a0f24-4aa8ff-d46aff-ffffff-d1d5db) to generate my color palette.
 
-When you add a color to the palette, the URL is dynamically updated, making it easier for you to return back to your color palette later if needed. See example below:
+- #0A0F24 primary background.
+- #4AA8FF right glow / accent blue.
+- #D46AFF left glow / accent pink.
+- #FFFFFF primary text.
+- #D1D5DB secondary text.
 
-⚠️ --- END --- ⚠️
-
-I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
-
-- `#000000` primary text.
-- `#3772FF` primary highlights.
-- `#DF2935` secondary text.
-- `#FDCA40` secondary highlights.
+(Note: Transparent overlays use rgba(10,15,36,0.5–0.95) to allow the dynamic glowing background to show through.)
 
 ![screenshot](documentation/coolors.png)
 
 ### Typography
 
-⚠️ INSTRUCTIONS ⚠️
+While maintaining a modern, Apple-esque aesthetic, I chose fonts that reflect clarity, simplicity, and readability. My goal was to create a clean, professional look that complements the overall dark, glowing design of the site.
 
-Explain any fonts and icon libraries used, like **Google Fonts**, **Font Awesome**, etc. Consider adding a link to each font used, the Font Awesome site (if used), or similar icon library.
-
-⚠️ --- END --- ⚠️
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Inter](https://fonts.google.com/specimen/Inter) was used for the headers and titles.
+- [Roboto](https://fonts.google.com/specimen/Roboto) was used for all other body text.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer and category icons.
 
 ## Wireframes
 
@@ -384,8 +378,8 @@ Consider adding screenshots of your Projects Board(s), Issues (open and closed),
 
 | Link | Screenshot |
 | --- | --- |
-| [![GitHub issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aopen%20-label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aopen%20-label%3Abug) | ![screenshot](documentation/gh-issues-open.png) |
-| [![GitHub closed issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aclosed%20-label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aclosed%20-label%3Abug) | ![screenshot](documentation/gh-issues-closed.png) |
+| [![GitHub issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aopen%20label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aopen%20label%3Abug) | ![screenshot](documentation/gh-issues-open.png) |
+| [![GitHub closed issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aclosed%20label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aclosed%20label%3Abug) | ![screenshot](documentation/gh-issues-closed.png) |
 
 ### MoSCoW Prioritization
 
