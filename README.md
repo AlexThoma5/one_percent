@@ -166,14 +166,6 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
-
 ### Existing Features
 
 | Feature | Notes | Screenshot |
@@ -181,48 +173,30 @@ In this section, you should go over the different parts of your project, and des
 | Register | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
 | Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
 | Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
-| Blog List | The homepage displays basic information about blog posts, including image, title, author, date, and a brief excerpt. | ![screenshot](documentation/features/blog-list.png) |
-| View Post | Users can view the full blog post details, including any comments. | ![screenshot](documentation/features/view-post.png) |
-| Pagination | Blog posts are displayed in pages, with six posts per page. This provides better navigation for users through the post list. | ![screenshot](documentation/features/pagination.png) |
-| Add Comments | Authenticated visitors can comment on blog posts; comments require approval before being published. | ![screenshot](documentation/features/add-comment.png) |
-| Edit Comments | Authenticated visitors can edit their own comments. | ![screenshot](documentation/features/edit-comment.png) |
-| Delete Comments | Authenticated visitors can delete their own comments. | ![screenshot](documentation/features/delete-comment.png) |
-| Comment Approvals | Admins can approve or disapprove comments submitted by users before they are visible on the blog post. | ![screenshot](documentation/features/comment-approval.png) |
-| Create Post | Site owners can create/publish blog posts, including setting a featured image using Cloudinary, all from the Django admin dashboard. | ![screenshot](documentation/features/create-post.png) |
-| Update Post | Site owners can update/manage blog posts from the Django admin dashboard. | ![screenshot](documentation/features/update-post.png) |
-| Delete Post | Site owners can delete blog posts from the Django admin dashboard. | ![screenshot](documentation/features/delete-post.png) |
-| About Page | The About page displays the latest information about the site author, along with the option for visitors to send collaboration requests. | ![screenshot](documentation/features/about.png) |
-| Collaboration Requests | Visitors can submit collaboration requests from the *About* page, which are later reviewed by the admin. | ![screenshot](documentation/features/collaboration.png) |
-| User Feedback | Clear and obvious Django messages are used to provide feedback to user actions. | ![screenshot](documentation/features/messages.png) |
+| Landing Page | The homepage introduces the site’s purpose — to help users improve by 1% every day — and provides links to register or log in. | ![screenshot](documentation/features/landing.png) |
+| Dashboard | Displays a personalised overview of the user’s progress, including all categories (Body, Mind, Skills, Habits) and a visual chart of logged activities. | ![screenshot](documentation/features/dashboard.png) |
+| Data visualation chart | A Chart.js chart dynamically updates to show the breakdown of logs per category, helping users visualise their journey. | ![screenshot](documentation/features/chart.png) |
+| Category Page | The homepage introduces the site’s purpose — to help users improve by 1% every day — and provides links to register or log in. | ![screenshot](documentation/features/category-page.png) |
+| Add Log Entry | Authenticated visitors can comment on blog posts; comments require approval before being published. | ![screenshot](documentation/features/add-log.png) |
+| Edit Log Entry | Authenticated visitors can edit their own comments. | ![screenshot](documentation/features/edit-log.png) |
+| Delete Log Entry | Authenticated visitors can delete their own comments. | ![screenshot](documentation/features/delete-log.png) |
+| Dynamic Background | The entire site features a glowing, animated background that changes size. This feature adds another level of depth to site, making it feel modern and alive. | ![screenshot](documentation/features/dynamic-background.png) |
+| User Feedback | Clear Django messages and notification banners provide instant feedback for actions ( successful/unsuccesful log actions) | ![screenshot](documentation/features/log-notification.png) |
+| Manage Categories | Site owners can add/manage categories from the Django admin dashboard. | ![screenshot](documentation/features/manage-categories.png) |
+| Manage Logs | Site owners can manage/perform CRUD on any user logs from the Django admin dashboard. | ![screenshot](documentation/features/manage-logs.png) |
 | Heroku Deployment | The site is fully deployed to Heroku, making it accessible online and easy to manage. | ![screenshot](documentation/features/heroku.png) |
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
 
 ### Future Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-Do you have additional ideas that you'd like to include on your project in the future? Fantastic, list them here! It's always great to have plans for future improvements. Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-A few examples are listed below to align with possible ways to improve on the sample walkthrough project, to give you some inspiration.
-
-⚠️ --- END ---⚠️
-
-- **Post Categories/Tags**: Allow users to categorize and tag blog posts, making it easier for visitors to filter content based on their interests.
-- **Post Search Functionality**: Add a search bar for users to quickly find posts by keywords or phrases.
-- **Post Likes/Dislikes or Upvotes**: Implement a "like" or "upvote" system for blog posts to encourage user engagement and give feedback to the author.
-- **User Profiles**: Create personalized user profiles where authenticated users can view their comments, liked posts, and account information.
-- **Comment Replies & Threads**: Enable users to reply to comments, creating nested comment threads for better discussions.
-- **Post Sharing**: Add social media sharing buttons (e.g., Twitter, Facebook, LinkedIn) for users to share blog posts.
-- **Notifications**: Implement a notification system that alerts users when their comments are approved, when new comments are made on a post they've commented on, or when new posts are published.
-- **Email Subscriptions**: Allow users to subscribe to receive email notifications for new posts, updates, or newsletters.
-- **Post Analytics**: Provide post authors with analytics such as views, time spent reading, and engagement rates.
-- **Multilingual Support**: Add the ability to write and view blog posts in multiple languages, broadening the audience.
-- **Related Posts Recommendations**: Show related posts at the bottom of a blog post to encourage further reading and keep users engaged.
-- **Content Flagging/Reporting**: Allow users to flag or report inappropriate content (comments or posts) for moderation.
-- **SEO Optimization**: Implement features for SEO, such as meta tags, custom URLs, and keywords for better search engine ranking.
-- **User Dashboard**: Provide users with a dashboard to track their activity, such as comments made, likes received, and blog posts they’ve interacted with.
-- **Admin Dashboard Analytics**: Provide site admins with an analytics dashboard showing user activity, popular posts, most commented articles, etc.
-- **Custom Themes for Users**: Allow users to customize the visual theme of the site (colors, fonts, etc.) to suit their preferences.
+- **Reward System**: Allow users to gain rewards (badges/streaks) for consistent logging. Boosting motivation and encouraging long-term engagement
+- **Log Search Functionality**: Add a search bar for users to quickly find logs by keywords.
+- **User Profiles**: Allow users to create a custom profile with their own profile picture and personal details.
+- **Goals List**: A list for the users goals, that they can check off as they achieve them.
+- **Achievement Sharing**: Add social media sharing buttons (e.g., Twitter, Facebook, LinkedIn) for users to share their latest achievements.
+- **Improved Data Visuals**: Provide users with a larger variety of data visuals for a more detailed breakdown of their activity
+- **Admin Dashboard Analytics**: Provide site admins with a dedicated analytics view to monitor user activity and inform category creation or deletion decisions.
+- **Custom Themes for Users**: Allow users to customise the visual theme of the site (colors, fonts, etc.) to suit their preferences.
 
 ## Tools & Technologies
 
