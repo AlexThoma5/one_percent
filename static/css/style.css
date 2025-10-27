@@ -41,7 +41,8 @@ body {
 .btn-custom {
   color: white;
   background: var(--card-bg-dark);
-  box-shadow: var(--primary-shadow);
+  -webkit-box-shadow: var(--primary-shadow);
+          box-shadow: var(--primary-shadow);
 }
 
 .btn-custom:hover {
@@ -72,9 +73,11 @@ body {
   width: 40vw;
   height: 40vw;
   border-radius: 50%;
-  filter: blur(60px);
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
   opacity: 0.7;
-  animation: pulse 7s ease-in-out infinite;
+  -webkit-animation: pulse 7s ease-in-out infinite;
+          animation: pulse 7s ease-in-out infinite;
 }
 
 .glow-blue {
@@ -88,15 +91,32 @@ body {
   left: -15vw;
 }
 
-@keyframes pulse {
+@-webkit-keyframes pulse {
   0%,
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 0.7;
   }
 
   50% {
-    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
     opacity: 0.9;
   }
 }
@@ -107,6 +127,8 @@ body {
   margin-top: 80px;
   max-width: 448px;
   width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#084431), color-stop(40%, #232631));
+  background: -o-linear-gradient(left, #084431 0%, #232631 40%);
   background: linear-gradient(90deg, #084431 0%, #232631 40%);
   color: #898c97;
 }
@@ -121,6 +143,8 @@ body {
 }
 
 .notification.error {
+  background: -webkit-gradient(linear, left top, right top, from(#480607), color-stop(40%, #232631));
+  background: -o-linear-gradient(left, #480607 0%, #232631 40%);
   background: linear-gradient(90deg, #480607 0%, #232631 40%);
 }
 
@@ -130,6 +154,8 @@ body {
 }
 
 .alert.fade {
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
 
@@ -137,7 +163,8 @@ body {
 
 .navbar-custom {
   background-color: rgb(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-transform: uppercase;
@@ -157,7 +184,8 @@ body {
 
 .footer-custom {
   background-color: rgb(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 /* -------------- landing.html styles -------------- */
@@ -187,16 +215,22 @@ body {
 
 .grow-wrapper:hover {
   background: var(--card-bg-darker);
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
-  transform: scale(1.05);
-  box-shadow: var(--primary-shadow);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: var(--primary-shadow);
+          box-shadow: var(--primary-shadow);
 }
 
 .content-icon {
   border-radius: 50%;
   aspect-ratio: 1/1;
   height: 150px;
-  box-shadow: var(--primary-shadow);
+  -webkit-box-shadow: var(--primary-shadow);
+          box-shadow: var(--primary-shadow);
 }
 
 .content-icon > i {
@@ -238,7 +272,8 @@ body {
   max-height: 220px;
   margin: 0 auto;
   background: var(--card-bg-medium);
-  box-shadow: var(--primary-shadow);
+  -webkit-box-shadow: var(--primary-shadow);
+          box-shadow: var(--primary-shadow);
   border-radius: 10px;
   border: 0.5px solid white;
 }
@@ -299,7 +334,8 @@ body {
 
 .log-card {
   background: var(--card-bg-dark);
-  box-shadow: var(--primary-shadow);
+  -webkit-box-shadow: var(--primary-shadow);
+          box-shadow: var(--primary-shadow);
 }
 
 .log-title {
@@ -338,8 +374,12 @@ body {
 }
 
 .grow:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* -------------- Account pages -------------- */
@@ -359,7 +399,8 @@ body {
   width: 100%;
   max-width: 400px;
   background: var(--card-bg-light);
-  box-shadow: var(--primary-shadow);
+  -webkit-box-shadow: var(--primary-shadow);
+          box-shadow: var(--primary-shadow);
   border-radius: 0.75rem;
   padding: 2rem;
   color: #e0e0e0;
@@ -380,7 +421,7 @@ body {
   width: 1px !important;
   height: 1px !important;
   overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%);
   white-space: nowrap !important;
 }
 
@@ -390,7 +431,8 @@ body {
 .card form input[type="password"] {
   display: block;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0.5rem 0.75rem;
   margin-bottom: 1rem;
   border-radius: 0.375rem;
@@ -404,7 +446,8 @@ body {
 .card form input[type="password"]:focus {
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 /* -------------- Media Queries -------------- */
