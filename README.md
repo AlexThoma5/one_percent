@@ -13,33 +13,10 @@ The goal of the project is to encourage consistency, reflection, and accountabil
 
 I chose to develop One Percent for my MS3 project because I have always been interested in self-development, and I felt that putting myself in the user’s shoes would help me design a more effective application. The concept of improving “one percent each day” resonates with me personally, and this project provided an opportunity to translate that philosophy into a functional and meaningful tool that others can use to achieve their goals.
 
-🛑 README NOTES 🛑
-
-Do not add a **Table of Contents** to your Markdown files. GitHub has these built-in automatically using the headers/hashtags.
-
-Don't add screenshots for the README/TESTING into your `assets` or `static` folders. Create a new folder at the root-level called `documentation`. Consider creating sub-directories within `documentation` to handle things like `wireframes`, `features`, `validation`, `responsiveness`, etc.
-
-Learn about Markdown Alerts (aka Callouts), a fairly new feature for GitHub Markdown files.
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
-Note: these are not visible within your README Previewer, and are only visible once you push the code to GitHub.
-
-**Site Mockups**
-*([amiresponsive](https://ui.dev/amiresponsive?url=https://one-percent-6389037dbddb.herokuapp.com), [techsini](https://techsini.com/multi-mockup), etc.)*
-Having issues generating site mockups? This is likely due to security policies with your deployed site.
-If you open up your DevTools, there may be an error referencing `X-Frame-Options`.
-
-For Chrome users, head over to http://bit.ly/3iRPn4u and install the extension within your browser. Once installed, navigate back to the mockup site of your choice. You should find your site rendering in the various devices now.
-
-Alternatively, open your project in Gitpod and run the server. Once the site is running, click the `Ports` tab from your Gitpod Terminal. Click the padlock on the appropriate port for your project (`Flask: 5000`, `Django: 8000`). This will make your local page public temporarily. Now, copy the URL of your live-preview page into the responsive tool above. You should find your site rendering in the various devices.
-
-🛑 --- END ---- 🛑
-
 ![screenshot](documentation/mockup.png)
 
-source: [one_percent amiresponsive](https://ui.dev/amiresponsive?url=https://one-percent-6389037dbddb.herokuapp.com)
+Live site can be found [here](https://one-percent-6389037dbddb.herokuapp.com).
 
-> [!IMPORTANT]  
-> The examples in these templates are strongly influenced by the Code Institute walkthrough project called "I Think Therefore I Blog".
 
 ## UX
 
