@@ -3,23 +3,7 @@
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
-⚠️ INSTRUCTIONS ⚠️
-
-In the following sections, you need to convince the assessors that you have conducted enough manual testing to legitimately believe that the site works well. Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-⚠️ --- END --- ⚠️
-
 ## Code Validation
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use the space below to discuss code validation for all of your own code files (*where applicable*). You are not required to validate external libraries/frameworks.
-
-**MANDATORY**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Where possible, always validate the live URL pages/files, not your local code using copy/paste. There could be subtle/hidden differences.
-
-⚠️ --- END --- ⚠️
 
 ### HTML
 
@@ -34,46 +18,19 @@ It's recommended to validate the live pages (all of them) using the deployed URL
 
 ⚠️ --- END --- ⚠️
 
-🛑 IMPORTANT 🛑
-
-RE: Python/Jinja syntax in HTML
-
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}` will not validate properly if you're copying/pasting into the HTML validator.
-
-In order to properly validate these types of files, it's recommended to [validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
-
-Unfortunately, pages that require a user to be "logged-in" and authenticated (CRUD functionality) will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have access to login to an account on your project. In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
-
-- Navigate to the deployed pages which require authentication.
-- Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
-- This will display the entire "compiled" code, without any Jinja syntax.
-- Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
-- Repeat this process for every page that requires a user to be logged-in/authenticated (e.g.: CRUD functionality).
-
-🛑 ---- END --- 🛑
-
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| categories | [category_detail.html](https://github.com/AlexThoma5/one_percent/blob/main/categories/templates/categories/category_detail.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-categories-category_detail.png) | ⚠️ Notes (if applicable) |
-| dashboard | [dashboard.html](https://github.com/AlexThoma5/one_percent/blob/main/dashboard/templates/dashboard/dashboard.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-dashboard-dashboard.png) | ⚠️ Notes (if applicable) |
-| dashboard | [landing.html](https://github.com/AlexThoma5/one_percent/blob/main/dashboard/templates/dashboard/landing.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-dashboard-landing.png) | ⚠️ Notes (if applicable) |
-| templates | [400.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/400.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-400.png) | ⚠️ Notes (if applicable) |
-| templates | [403.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/403.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-403.png) | ⚠️ Notes (if applicable) |
-| templates | [404.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/404.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-404.png) | ⚠️ Notes (if applicable) |
-| templates | [500.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/500.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-500.png) | ⚠️ Notes (if applicable) |
-| templates | [test_403_csrf.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/tests/test_403_csrf.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-test_403_csrf.png) | ⚠️ Notes (if applicable) |
-| templates | [email_confirm.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/email_confirm.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-email_confirm.png) | ⚠️ Notes (if applicable) |
-| templates | [login.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/login.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-login.png) | ⚠️ Notes (if applicable) |
-| templates | [logout.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/logout.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-logout.png) | ⚠️ Notes (if applicable) |
-| templates | [password_reset.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/password_reset.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-password_reset.png) | ⚠️ Notes (if applicable) |
-| templates | [password_reset_done.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/password_reset_done.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-password_reset_done.png) | ⚠️ Notes (if applicable) |
-| templates | [password_reset_from_key.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/password_reset_from_key.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-password_reset_from_key.png) | ⚠️ Notes (if applicable) |
-| templates | [password_reset_from_key_done.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/password_reset_from_key_done.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-password_reset_from_key_done.png) | ⚠️ Notes (if applicable) |
-| templates | [signup.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/signup.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-signup.png) | ⚠️ Notes (if applicable) |
-| templates | [verification_sent.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/verification_sent.html) | ⚠️ Link (if applicable) | ![screenshot](documentation/validation/html-templates-verification_sent.png) | ⚠️ Notes (if applicable) |
-
+| dashboard | [landing.html](https://github.com/AlexThoma5/one_percent/blob/main/dashboard/templates/dashboard/landing.html) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Flanding%2F | ![screenshot](documentation/validation/html-dashboard-landing.png) |  || categories | [category_detail.html](https://github.com/AlexThoma5/one_percent/blob/main/categories/templates/categories/category_detail.html) | N/A | ![screenshot](documentation/validation/html-categories-category_detail.png) | Validated by input - No link |
+| dashboard | [dashboard.html](https://github.com/AlexThoma5/one_percent/blob/main/dashboard/templates/dashboard/dashboard.html) | N/A | ![screenshot](documentation/validation/html-dashboard-dashboard.png) | Validated by direct input - No link |
+| templates | [400.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/400.html) | N/A | ![screenshot](documentation/validation/html-templates-400.png) | Validated by direct input - No link |
+| templates | [403.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/403.html) | N/A | ![screenshot](documentation/validation/html-templates-403.png) | Validated by direct input - No link |
+| templates | [404.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/404.html) | N/A | ![screenshot](documentation/validation/html-templates-404.png) | Validated by direct input - No link |
+| templates | [500.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/500.html) | N/A | ![screenshot](documentation/validation/html-templates-500.png) | Validated by direct input - No link |
+| templates | [login.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/login.html) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Faccounts%2Flogin%2F | ![screenshot](documentation/validation/html-templates-login.png) |  |
+| templates | [signup.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/signup.html) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Faccounts%2Fsignup%2F | ![screenshot](documentation/validation/html-templates-signup.png) |  |
+| templates | [logout.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/logout.html) | N/A | ![screenshot](documentation/validation/html-templates-logout.png) | Validated by direct input - No link |
 
 ### CSS
 
