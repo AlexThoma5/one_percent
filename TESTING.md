@@ -34,15 +34,6 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 ### CSS
 
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-2. If you are copying/pasting your CSS code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-
-It's recommended to validate the live site for your primary CSS file on the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https://one-percent-6389037dbddb.herokuapp.com
-
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | Screenshot | Notes |
@@ -57,33 +48,12 @@ Here is the link to see the errors:
 
 ### JavaScript
 
-⚠️ INSTRUCTIONS ⚠️
-
-If using modern JavaScript (ES6) methods, then make sure to include the following line at the very top of every single JavaScript file in your project (this should remain in your files for submission as well):
-
-`/* jshint esversion: 11 */`
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-`/* jshint esversion: 11, jquery: true */`
-
-This allows the JShint validator to recognize modern ES6 methods, such as: `let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as "an array of questions" from `questions.js`, which are used within the main `script.js` file elsewhere. If that's the case, the JShint validation tool doesn't know how to recognize "unused variables" that would normally be imported locally when running your own project. These warnings are acceptable, so showcase on your screenshot(s).
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc. To instantiate these components, we need to use their respective declarator. Again, the JShint validation tool would flag these as "undefined/unused variables". These warnings are acceptable, so showcase on your screenshot(s).
-
-⚠️ --- END --- ⚠️
-
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [chart.js](https://github.com/AlexThoma5/one_percent/blob/main/static/js/chart.js) |  | ![screenshot](documentation/validation/js-static-chart.png) | ⚠️ Notes (if applicable) |
-| static | [logs.js](https://github.com/AlexThoma5/one_percent/blob/main/static/js/logs.js) |  | ![screenshot](documentation/validation/js-static-logs.png) | ⚠️ Notes (if applicable) |
-
+| static | [chart.js](https://github.com/AlexThoma5/one_percent/blob/main/static/js/chart.js) |  | ![screenshot](documentation/validation/js-static-chart.png) | 'new' is needed for chart.js, therefore ignored warning. |
+| static | [logs.js](https://github.com/AlexThoma5/one_percent/blob/main/static/js/logs.js) |  | ![screenshot](documentation/validation/js-static-logs.png) | Undefined variable caused by Bootstrap external library |
 
 ### Python
 
