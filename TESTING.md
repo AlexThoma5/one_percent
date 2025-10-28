@@ -79,34 +79,26 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 ## Responsiveness
 
-⚠️ INSTRUCTIONS ⚠️
+I've tested my deployed project to check for responsiveness issues. To carry out these tests I used Google Chrome's device emulator. The three devices I chose to use were:
 
-Use this space to discuss testing the live/deployed site on various device sizes.
+| Device              | CSS Viewport (Width × Height) | Notes                              |
+|---------------------|-------------------------------|------------------------------------|
+| iPhone 14 Pro Max   | 430 × 932                     | Chrome DevTools preset             |
+| iPad Mini           | 768 × 1024                    | Chrome DevTools preset             |
+| MacBook Air (full screen) | ~1470 × 956              | Actual viewport in Chrome window   |
 
-The minimum requirement is to test the following 3 sizes:
-
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of your results, to "prove" that you've actually tested them.
-
-Using the [amiresponsive](http://ami.responsivedesign.is) mockup images (*or similar*) does not meet the requirements. Consider using some of the built-in device sizes from the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well. It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-⚠️ --- END --- ⚠️
-
-I've tested my deployed project to check for responsiveness issues.
 
 | Page | Mobile | Tablet | Desktop | Notes |
 | --- | --- | --- | --- | --- |
+| Landing page | ![screenshot](documentation/responsiveness/mobile-landing.png) | ![screenshot](documentation/responsiveness/tablet-landing.png) | ![screenshot](documentation/responsiveness/desktop-landing.png) | Works as expected |
 | Register | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | Works as expected |
 | Login | ![screenshot](documentation/responsiveness/mobile-login.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | Works as expected |
-| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/responsiveness/mobile-add-blog.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/responsiveness/desktop-add-blog.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/responsiveness/mobile-edit-blog.png) | ![screenshot](documentation/responsiveness/tablet-edit-blog.png) | ![screenshot](documentation/responsiveness/desktop-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/responsiveness/mobile-blog-post.png) | ![screenshot](documentation/responsiveness/tablet-blog-post.png) | ![screenshot](documentation/responsiveness/desktop-blog-post.png) | Works as expected |
+| Logout | ![screenshot](documentation/responsiveness/mobile-logout.png) | ![screenshot](documentation/responsiveness/tablet-logout.png) | ![screenshot](documentation/responsiveness/desktop-logout.png) | Works as expected |
+| Dashboard | ![screenshot](documentation/responsiveness/mobile-dashboard.png) | ![screenshot](documentation/responsiveness/tablet-dashboard.png) | ![screenshot](documentation/responsiveness/desktop-dashboard.png) | Works as expected |
+| Category Page | ![screenshot](documentation/responsiveness/mobile-category.png) | ![screenshot](documentation/responsiveness/tablet-category.png) | ![screenshot](documentation/responsiveness/desktop-category.png) | Works as expected |
+| Add Log | ![screenshot](documentation/responsiveness/mobile-add-log.png) | ![screenshot](documentation/responsiveness/tablet-add-log.png) | ![screenshot](documentation/responsiveness/desktop-add-log.png) | Works as expected |
+| Edit Log | ![screenshot](documentation/responsiveness/mobile-edit-log.png) | ![screenshot](documentation/responsiveness/tablet-edit-log.png) | ![screenshot](documentation/responsiveness/desktop-edit-log.png) | Works as expected |
+| Delete Log | ![screenshot](documentation/responsiveness/mobile-delete-log.png) | ![screenshot](documentation/responsiveness/tablet-delete-log.png) | ![screenshot](documentation/responsiveness/desktop-delete-log.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
 
 ## Browser Compatibility
