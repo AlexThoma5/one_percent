@@ -39,9 +39,12 @@ def category_detail(request, slug):
             log.user = request.user
             log.category = category
             log.save()
-            messages.add_message(request, messages.SUCCESS, 'Great job! Your new log has been added.')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Great job! Your new log has been added.')
         else:
-            messages.add_message(request, messages.ERROR, 'Something went wrong — but your effort still matters.')
+            messages.add_message(request, messages.ERROR,
+                                 'Something went wrong —'
+                                 ' but your effort still matters.')
 
     log_form = LogForm()
     edit_log_form = LogForm(prefix="edit")
@@ -77,7 +80,8 @@ def log_edit(request, slug, log_id):
             log_form.save()
             messages.add_message(request, messages.SUCCESS, 'Log Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating Log!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating Log!')
 
     return HttpResponseRedirect(reverse('category_detail', args=[slug]))
 
@@ -98,6 +102,8 @@ def log_delete(request, slug, log_id):
         log.delete()
         messages.add_message(request, messages.SUCCESS, 'Log deleted!')
     else:
-        messages.add_message(request, messages.ERROR, "Deletion didn’t work, but you’ve still got control over your journey.")
+        messages.add_message(request, messages.ERROR,
+                             "Deletion didn’t work,"
+                             "but you’ve still got control over your journey.")
 
     return HttpResponseRedirect(reverse('category_detail', args=[slug]))
