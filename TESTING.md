@@ -221,15 +221,9 @@ I have conducted a series of automated tests on my application.
 
 ### Python (Unit Testing)
 
-⚠️ INSTRUCTIONS ⚠️
+I have used Django's built-in unit testing framework to test the application functionality. In order to run the tests, I used the following command:
 
-Adjust the code below (file names, function names, etc.) to match your own project files/folders. Use these notes loosely when documenting your own Python Unit tests, and remove/adjust where applicable.
-
-⚠️ SAMPLE ⚠️
-
-I have used Django's built-in unit testing framework to test the application functionality. In order to run the tests, I ran the following command in the terminal each time:
-
-- `python3 manage.py test name-of-app`
+- `python3 manage.py test`
 
 To create the coverage report, I would then run the following commands:
 
@@ -246,14 +240,6 @@ To see the HTML version of the reports, and find out whether some pieces of code
 Below are the results from the full coverage report on my application that I've tested:
 
 ![screenshot](documentation/automation/html-coverage.png)
-
-#### Unit Test Issues
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this section to list any known issues you ran into while writing your Python unit tests. Remember to include screenshots (where possible), and a solution to the issue (if known). This can be used for both "fixed" and "unresolved" issues. Remove this sub-section entirely if you somehow didn't run into any issues while working with your tests.
-
-⚠️ --- END --- ⚠️
 
 ## Bugs
 
