@@ -196,36 +196,21 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-⚠️ INSTRUCTIONS ⚠️
-
-Testing User Stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **Features** should already align with the **User Stories**, so this should be as simple as creating a table with the User Story, matching with the re-used screenshot from the respective Feature.
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
-| As a blog owner | I would like to create new blog posts with a title, featured image, and content | so that I can share my experiences with my audience. | ![screenshot](documentation/features/feature01.png) |
-| As a blog owner | I would like to update existing blog posts | so that I can correct or add new information to my previous stories. | ![screenshot](documentation/features/feature02.png) |
-| As a blog owner | I would like to delete blog posts | so that I can remove outdated or irrelevant content from my blog. | ![screenshot](documentation/features/feature03.png) |
-| As a blog owner | I would like to retrieve a list of all my published blog posts | so that I can manage them from a central dashboard. | ![screenshot](documentation/features/feature04.png) |
-| As a blog owner | I would like to preview a post as draft before publishing it | so that I can ensure formatting and content appear correctly. | ![screenshot](documentation/features/feature05.png) |
-| As a blog owner | I would like to review comments before they are published | so that I can filter out spam or inappropriate content. | ![screenshot](documentation/features/feature06.png) |
-| As a blog owner | I would like to approve or reject comments from users | so that I can maintain control over the discussion on my posts. | ![screenshot](documentation/features/feature07.png) |
-| As a blog owner | I would like to view a list of all comments (both approved and pending) | so that I can manage user engagement effectively. | ![screenshot](documentation/features/feature08.png) |
-| As a blog owner | I would like to edit or delete user comments | so that I can clean up or remove inappropriate responses after they've been posted. | ![screenshot](documentation/features/feature09.png) |
-| As a registered user | I would like to log in to the site | so that I can leave comments on blog posts. | ![screenshot](documentation/features/feature10.png) |
-| As a registered user | I would like to register for an account | so that I can become part of the community and engage with the blog. | ![screenshot](documentation/features/feature11.png) |
-| As a registered user | I would like to leave a comment on a blog post | so that I can share my thoughts or ask questions about the owner's experiences. | ![screenshot](documentation/features/feature12.png) |
-| As a registered user | I would like my comment to show my name and the timestamp | so that others can see who I am and when I left the comment. | ![screenshot](documentation/features/feature13.png) |
-| As a registered user | I would like to receive a notification or message saying my comment is pending approval | so that I understand it hasn't been posted immediately. | ![screenshot](documentation/features/feature14.png) |
-| As a registered user | I would like to edit or delete my own comments | so that I can fix mistakes or retract my statement. | ![screenshot](documentation/features/feature15.png) |
-| As a guest user | I would like to read blog posts without registering | so that I can enjoy the content without needing to log in. | ![screenshot](documentation/features/feature16.png) |
-| As a guest user | I would like to browse past posts | so that I can explore the blog's full content history. | ![screenshot](documentation/features/feature17.png) |
-| As a guest user | I would like to register for an account | so that I can participate in the community by leaving comments on posts. | ![screenshot](documentation/features/feature18.png) |
-| As a guest user | I would like to see the names of other commenters on posts | so that I can get a sense of community interaction before registering. | ![screenshot](documentation/features/feature19.png) |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature20.png) |
+| As a site owner | I would like to view, edit, or delete any user logs if necessary | so that I can maintain data integrity and moderation. | ![screenshot](documentation/features/user-story-1.gif) |
+| As a site owner | I would like to manage log categories via the admin panel | so that I can tailor the website to my users' needs. | ![screenshot](documentation/features/user-story-2.gif) |
+| As a registered user | I would like to view my personal dashboard after logging in | so that I can see an overview of my progress. | ![screenshot](documentation/features/user-story-3.gif) |
+| As a registered user | I would like to add a new log entry to a category | so that I can record my daily or weekly progress. | ![screenshot](documentation/features/user-story-4.gif) |
+| As a registered user | I would like to edit or delete existing log entries | so that I can manage or correct my data. | ![screenshot](documentation/features/user-story-5.gif) |
+| As a registered user | I would like my logs to show the timestamp | so that I can see when I made or edited it. | ![screenshot](documentation/features/user-story-6.png) |
+| As a registered user | would like to receive confirmation or alert messages (e.g., “Log added successfully”) | so that I know my actions were completed correctly. | ![screenshot](documentation/features/user-story-7.gif) |
+| As a registered user | I would like the dashboard and category pages to be responsive on all devices | so that I can track my progress anywhere. | ![screenshot](documentation/features/user-story-8.png) |
+| As a registered user | I would like to see a chart with a visual breakdown of my logs | so that I can quickly understand and reflect on my growth. | ![screenshot](documentation/features/user-story-9.gif) |
+| As a new user | I would like to register for an account | so that I can begin tracking my personal growth. | ![screenshot](documentation/features/user-story-10.gif) |
+| As a new user | I would like to log in securely after registering | so that I can access my dashboard and saved data. | ![screenshot](documentation/features/user-story-11.gif) |
+| As a new user | I would like to view the landing page before signing up | so that I can understand what the site offers. | ![screenshot](documentation/features/user-story-12.gif) |
+| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/user-story-13.gif) |
 
 ## Automated Testing
 
