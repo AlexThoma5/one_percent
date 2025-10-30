@@ -23,9 +23,6 @@
                  name="{{ redirect_field_name }}"
                  value="{{ redirect_field_value }}" />
         {% endif %}
-        <div class="text-center mb-3">
-          <a href="{% url 'account_reset_password' %}" class="medium form-links">{% trans "Forgot Password?" %}</a>
-        </div>
         <button class="btn btn-primary w-100 py-2">{% trans "Sign In" %}</button>
       </form>
     </div>
