@@ -11,14 +11,14 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| dashboard | [landing.html](https://github.com/AlexThoma5/one_percent/blob/main/dashboard/templates/dashboard/landing.html) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Flanding%2F | ![screenshot](documentation/validation/html-dashboard-landing.png) |  || categories | [category_detail.html](https://github.com/AlexThoma5/one_percent/blob/main/categories/templates/categories/category_detail.html) | N/A | ![screenshot](documentation/validation/html-categories-category_detail.png) | Validated by input - No link |
+| dashboard | [landing.html](https://github.com/AlexThoma5/one_percent/blob/main/dashboard/templates/dashboard/landing.html) |[W3C Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Flanding%2F) | ![screenshot](documentation/validation/html-dashboard-landing.png) |  || categories | [category_detail.html](https://github.com/AlexThoma5/one_percent/blob/main/categories/templates/categories/category_detail.html) | N/A | ![screenshot](documentation/validation/html-categories-category_detail.png) | Validated by input - No link |
 | dashboard | [dashboard.html](https://github.com/AlexThoma5/one_percent/blob/main/dashboard/templates/dashboard/dashboard.html) | N/A | ![screenshot](documentation/validation/html-dashboard-dashboard.png) | Validated by direct input - No link |
 | templates | [400.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/400.html) | N/A | ![screenshot](documentation/validation/html-templates-400.png) | Validated by direct input - No link |
 | templates | [403.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/403.html) | N/A | ![screenshot](documentation/validation/html-templates-403.png) | Validated by direct input - No link |
 | templates | [404.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/404.html) | N/A | ![screenshot](documentation/validation/html-templates-404.png) | Validated by direct input - No link |
 | templates | [500.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/errors/500.html) | N/A | ![screenshot](documentation/validation/html-templates-500.png) | Validated by direct input - No link |
-| templates | [login.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/login.html) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Faccounts%2Flogin%2F | ![screenshot](documentation/validation/html-templates-login.png) |  |
-| templates | [signup.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/signup.html) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Faccounts%2Fsignup%2F | ![screenshot](documentation/validation/html-templates-signup.png) |  |
+| templates | [login.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/login.html) | [W3C Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/validation/html-templates-login.png) |  |
+| templates | [signup.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/signup.html) | [W3C Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fone-percent-6389037dbddb.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/validation/html-templates-signup.png) |  |
 | templates | [logout.html](https://github.com/AlexThoma5/one_percent/blob/main/templates/account/logout.html) | N/A | ![screenshot](documentation/validation/html-templates-logout.png) | Validated by direct input - No link |
 
 ### CSS
@@ -27,13 +27,13 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [style.css](https://github.com/AlexThoma5/one_percent/blob/main/static/css/style.css) | https://jigsaw.w3.org/css-validator/validator?uri=https://one-percent-6389037dbddb.herokuapp.com/static/css/style.ccb4c7aca48d.css&output=html | ![screenshot](documentation/validation/css-static-style.png) | Warnings appear due to autoprefixer vendor extensions |
+| static | [style.css](https://github.com/AlexThoma5/one_percent/blob/main/static/css/style.css) | [W3C CSS Link](https://jigsaw.w3.org/css-validator/validator?uri=https://one-percent-6389037dbddb.herokuapp.com/static/css/style.css) | ![screenshot](documentation/validation/css-static-style.png) | Warnings appear due to autoprefixer vendor extensions |
 
 When validating by URI, I recieved errors due to the AOS library used for animations across the site.
 
 Here is the link to see the errors:
 
-- https://jigsaw.w3.org/css-validator/validator?uri=https://one-percent-6389037dbddb.herokuapp.com
+- [W3C CSS Link](https://jigsaw.w3.org/css-validator/validator?uri=https://one-percent-6389037dbddb.herokuapp.com)
 
 ### JavaScript
 
