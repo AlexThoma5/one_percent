@@ -131,7 +131,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | As a registered user | I would like to add a new log entry to a category | so that I can record my daily or weekly progress. |
 | As a registered user | I would like to edit or delete existing log entries | so that I can manage or correct my data. |
 | As a registered user | I would like my logs to show the timestamp | so that I can see when I made or edited it. |
-| As a registered user | would like to receive confirmation or alert messages (e.g., “Log added successfully”) | so that I know my actions were completed correctly. |
+| As a registered user | I would like to receive confirmation or alert messages (e.g., “Log added successfully”) | so that I know my actions were completed correctly. |
 | As a registered user | I would like the dashboard and category pages to be responsive on all devices | so that I can track my progress anywhere. |
 | As a registered user | I would like to see a chart with a visual breakdown of my logs | so that I can quickly understand and reflect on my growth. |
 | As a new user | I would like to register for an account | so that I can begin tracking my personal growth. |
@@ -240,15 +240,9 @@ source: [Mermaid](https://www.mermaidchart.com/d/dce66046-5c9a-4cfd-a37d-4251a50
 
 ### GitHub Projects
 
-⚠️ TIP ⚠️
+[GitHub Projects](https://www.github.com/AlexThoma5/one_percent/projects) served as an Agile tool for this project. Through it, User Stories and issues/bugs tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
-Consider adding screenshots of your Projects Board(s), Issues (open and closed), and Milestone tasks.
-
-⚠️ --- END ---⚠️
-
-[GitHub Projects](https://www.github.com/AlexThoma5/one_percent/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
-
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/gh-projects.gif)
 
 ### GitHub Issues
 
