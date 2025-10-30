@@ -195,6 +195,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [![badge](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) | Creating wireframes. |
 | [![badge](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) | Icons. |
 | [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
+| [![badge](https://img.shields.io/badge/Chart.js-grey?logo=chartdotjs&logoColor=FF6384)](https://www.chartjs.org) | Interactive data visualization charts on the user Dashboard. |
+| [![badge](https://img.shields.io/badge/AOS-grey?logo=javascript&logoColor=#F7DF1E)](https://michalsnik.github.io/aos) | Animate on Scroll Library |
 
 ## Database Design
 
@@ -454,6 +456,7 @@ There are no remaining major differences between the local version when compared
 | [Markdown Builder](https://markdown.2bn.dev) | Help generating Markdown files |
 | [I Think Therefore I Blog](https://codeinstitute.net) | Code Institute walkthrough project inspiration |
 | [Bootstrap](https://getbootstrap.com) | Various components / responsive front-end framework |
+| [Bootstrap Template](https://startbootstrap.com/previews/one-page-wonder) | Template inspiration for landing page |
 | [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [ChatGPT](https://chatgpt.com) | Help with code logic, debugging and explanations. Extra help with chart.js chart |
