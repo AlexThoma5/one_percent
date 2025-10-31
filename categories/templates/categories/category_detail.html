@@ -77,7 +77,7 @@
        aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form method="post" id="logForm">
+        <form method="post" id="logForm" class="prevent-double-submit">
           {% csrf_token %}
           <div class="modal-header">
             <h2 class="modal-title fs-5" id="addLogModalLabel">Add {{ category.name }} log</h2>
@@ -109,7 +109,7 @@
        aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form method="post" id="editLogForm">
+        <form method="post" id="editLogForm" class="prevent-double-submit">
           {% csrf_token %}
           <div class="modal-header">
             <h2 class="modal-title fs-5" id="editLogModalLabel">Edit {{ category.name }} log</h2>
