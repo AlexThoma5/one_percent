@@ -246,12 +246,12 @@ source: [Mermaid](https://www.mermaidchart.com/d/dce66046-5c9a-4cfd-a37d-4251a50
 
 ### GitHub Issues
 
-[GitHub Issues](https://www.github.com/AlexThoma5/one_percent/issues) served as an another Agile tool. There, I managed my User Stories and Milestone tasks, and tracked any issues/bugs.
+[GitHub Issues](https://www.github.com/AlexThoma5/one_percent/issues) served as an another Agile tool. There, I managed my User Stories and tracked any issues/bugs.
 
 | Link | Screenshot |
 | --- | --- |
-| [![GitHub issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aopen%20label%3Abug&label=Open%20Issues&color=yellow)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aopen%20label%3Abug) | ![screenshot](documentation/gh-issues-open.png) |
-| [![GitHub closed issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aclosed%20label%3Abug&label=Closed%20Issues&color=green)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aclosed%20label%3Abug) | ![screenshot](documentation/gh-issues-closed.png) |
+| [![GitHub issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aopen%20&label=Open%20Issues&color=yellow)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aopen) | ![screenshot](documentation/gh-issues-open.png) |
+| [![GitHub closed issues](https://img.shields.io/github/issues-search/AlexThoma5/one_percent?query=is%3Aissue%20is%3Aclosed%20&label=Closed%20Issues&color=green)](https://www.github.com/AlexThoma5/one_percent/issues?q=is%3Aissue%20is%3Aclosed) | ![screenshot](documentation/gh-issues-closed.png) |
 
 ### MoSCoW Prioritization
 
