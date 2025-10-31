@@ -166,7 +166,16 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## Automated Testing
 
-I have conducted a series of automated tests on my application.
+A series of 9 automated tests have been conducted on the application, covering:
+
+Forms: All forms in the `categories` app.
+
+Views: Views in both the `categories` and `dashboard` apps.
+
+These tests help ensure that form validation and view functionality behave as expected.
+All tests ran 'OK'.
+
+![screenshot](documentation/automation/test-result.png)
 
 > [!NOTE]  
 > I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
