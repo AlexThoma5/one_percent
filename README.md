@@ -197,6 +197,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | [![badge](https://img.shields.io/badge/ChatGPT-grey?logo=openai&logoColor=75A99C)](https://chat.openai.com) | Help debug, troubleshoot, and explain things. |
 | [![badge](https://img.shields.io/badge/Chart.js-grey?logo=chartdotjs&logoColor=FF6384)](https://www.chartjs.org) | Interactive data visualization charts on the user Dashboard. |
 | [![badge](https://img.shields.io/badge/AOS-grey?logo=javascript&logoColor=#F7DF1E)](https://michalsnik.github.io/aos) | Animate on Scroll Library |
+| [![badge](https://img.shields.io/badge/djlint-grey?logo=django&logoColor=092E20)](https://djlint.com/) | Used as Django template formatter |
 
 ## Database Design
 
@@ -270,6 +271,9 @@ I've decomposed my Epics into User Stories for prioritizing and implementing the
 ## Deployment
 
 The live deployed application can be found deployed on [Heroku](https://one-percent-6389037dbddb.herokuapp.com).
+
+> [!IMPORTANT]  
+> Certain packages in `requirements.txt` are included to support DjLint, ensuring Django templates are properly linted and formatted.
 
 ### Heroku Deployment
 
