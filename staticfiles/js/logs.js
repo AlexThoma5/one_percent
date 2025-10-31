@@ -9,6 +9,8 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 
 const alerts = document.querySelectorAll(".alert");
 
+const forms = document.querySelectorAll(".prevent-double-submit");
+
 /**
  * Initialises edit functionality for the provided edit buttons.
  *
@@ -70,4 +72,22 @@ alerts.forEach((alert) => {
       bootstrap.Alert.getOrCreateInstance(alert).close();
     }
   }, 4000);
+});
+
+/**
+ * Initializes form submission behavior that updates the submit button.
+ *
+ * For each form in the `forms` collection:
+ * - Attaches a "submit" event listener.
+ * - Finds the form's submit button via `[type='submit']`.
+ * - Disables the submit button to prevent duplicate submissions.
+ * - Updates the button text to "Saving..." to provide visual feedback.
+ */
+
+forms.forEach((form) => {
+  form.addEventListener("submit", (e) => {
+    let submitButton = form.querySelector("[type='submit']");
+      submitButton.disabled = true;
+      submitButton.innerText = 'Saving..';
+  });
 });
